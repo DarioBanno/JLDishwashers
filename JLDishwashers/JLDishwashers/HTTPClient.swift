@@ -26,7 +26,7 @@ enum HTTPClientError: Error {
 
 struct HTTPClient {
     
-    let urlSession: URLSession
+    private let urlSession: URLSession
     
     init(urlSession: URLSession) {
         self.urlSession = urlSession

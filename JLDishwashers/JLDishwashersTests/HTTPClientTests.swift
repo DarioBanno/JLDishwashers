@@ -9,27 +9,6 @@
 import XCTest
 @testable import JLDishwashers
 
-// Use MockURLSession and dependency injection to test network calls
-
-class MockURLSessionDataTask: URLSessionDataTask {
-    override func resume() {
-        // do nothing
-    }
-}
-
-class MockURLSession: URLSession {
-    
-    var responseData: Data?
-    var responseError: Error?
-    
-    override func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-        completionHandler(responseData, nil, responseError)
-        return MockURLSessionDataTask()
-    }
-    
-}
-
-
 class HTTPClientTests: XCTestCase {
     
     var httpClient: HTTPClient!

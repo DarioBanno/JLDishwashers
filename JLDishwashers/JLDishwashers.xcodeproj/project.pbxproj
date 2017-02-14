@@ -13,8 +13,14 @@
 		4908FD171E52FA3800CDC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4908FD161E52FA3800CDC700 /* Assets.xcassets */; };
 		4908FD1A1E52FA3800CDC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4908FD181E52FA3800CDC700 /* LaunchScreen.storyboard */; };
 		4908FD251E52FA3800CDC700 /* JLDishwashersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD241E52FA3800CDC700 /* JLDishwashersTests.swift */; };
+		4908FD301E52FD7000CDC700 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD2F1E52FD7000CDC700 /* NetworkManager.swift */; };
 		4908FD331E52FD8C00CDC700 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD321E52FD8C00CDC700 /* HTTPClient.swift */; };
 		4908FD351E52FE3300CDC700 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD341E52FE3300CDC700 /* HTTPClientTests.swift */; };
+		4908FD371E53031300CDC700 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD361E53031300CDC700 /* Service.swift */; };
+		4908FD391E53032600CDC700 /* ProductListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD381E53032600CDC700 /* ProductListService.swift */; };
+		4908FD3B1E53033F00CDC700 /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD3A1E53033F00CDC700 /* ServiceConfiguration.swift */; };
+		4908FD3E1E53037600CDC700 /* ProductListServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD3D1E53037600CDC700 /* ProductListServiceTests.swift */; };
+		4908FD401E53040700CDC700 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD3F1E53040700CDC700 /* MockURLSession.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +44,14 @@
 		4908FD201E52FA3800CDC700 /* JLDishwashersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JLDishwashersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4908FD241E52FA3800CDC700 /* JLDishwashersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JLDishwashersTests.swift; sourceTree = "<group>"; };
 		4908FD261E52FA3800CDC700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4908FD2F1E52FD7000CDC700 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4908FD321E52FD8C00CDC700 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		4908FD341E52FE3300CDC700 /* HTTPClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
+		4908FD361E53031300CDC700 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		4908FD381E53032600CDC700 /* ProductListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListService.swift; sourceTree = "<group>"; };
+		4908FD3A1E53033F00CDC700 /* ServiceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
+		4908FD3D1E53037600CDC700 /* ProductListServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListServiceTests.swift; sourceTree = "<group>"; };
+		4908FD3F1E53040700CDC700 /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,8 @@
 			children = (
 				4908FD241E52FA3800CDC700 /* JLDishwashersTests.swift */,
 				4908FD341E52FE3300CDC700 /* HTTPClientTests.swift */,
+				4908FD3D1E53037600CDC700 /* ProductListServiceTests.swift */,
+				4908FD411E53042A00CDC700 /* Mocks */,
 				4908FD261E52FA3800CDC700 /* Info.plist */,
 			);
 			path = JLDishwashersTests;
@@ -105,9 +119,29 @@
 		4908FD311E52FD7500CDC700 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4908FD2F1E52FD7000CDC700 /* NetworkManager.swift */,
 				4908FD321E52FD8C00CDC700 /* HTTPClient.swift */,
+				4908FD3C1E53035500CDC700 /* Services */,
 			);
 			name = Network;
+			sourceTree = "<group>";
+		};
+		4908FD3C1E53035500CDC700 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				4908FD361E53031300CDC700 /* Service.swift */,
+				4908FD3A1E53033F00CDC700 /* ServiceConfiguration.swift */,
+				4908FD381E53032600CDC700 /* ProductListService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		4908FD411E53042A00CDC700 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4908FD3F1E53040700CDC700 /* MockURLSession.swift */,
+			);
+			name = Mocks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +249,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4908FD3B1E53033F00CDC700 /* ServiceConfiguration.swift in Sources */,
+				4908FD301E52FD7000CDC700 /* NetworkManager.swift in Sources */,
 				4908FD121E52FA3800CDC700 /* ViewController.swift in Sources */,
+				4908FD371E53031300CDC700 /* Service.swift in Sources */,
+				4908FD391E53032600CDC700 /* ProductListService.swift in Sources */,
 				4908FD331E52FD8C00CDC700 /* HTTPClient.swift in Sources */,
 				4908FD101E52FA3800CDC700 /* AppDelegate.swift in Sources */,
 			);
@@ -225,6 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4908FD401E53040700CDC700 /* MockURLSession.swift in Sources */,
+				4908FD3E1E53037600CDC700 /* ProductListServiceTests.swift in Sources */,
 				4908FD351E52FE3300CDC700 /* HTTPClientTests.swift in Sources */,
 				4908FD251E52FA3800CDC700 /* JLDishwashersTests.swift in Sources */,
 			);
