@@ -23,4 +23,7 @@ struct ProductListService: Service {
         self.httpClient = httpClient
     }
     
+    func search(query: String, pageSize: Int, completion: @escaping (_ products: [Product]?, _ error: HTTPClientError?) -> ()) {
+    }
+    
 }

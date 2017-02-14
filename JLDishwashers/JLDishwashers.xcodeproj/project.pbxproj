@@ -28,6 +28,7 @@
 		4908FD4C1E530B7000CDC700 /* Product.json in Resources */ = {isa = PBXBuildFile; fileRef = 4908FD4B1E530B7000CDC700 /* Product.json */; };
 		4908FD4E1E530B7800CDC700 /* Product_no_productId.json in Resources */ = {isa = PBXBuildFile; fileRef = 4908FD4D1E530B7800CDC700 /* Product_no_productId.json */; };
 		4908FD501E530B9900CDC700 /* JSONStubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD4F1E530B9900CDC700 /* JSONStubber.swift */; };
+		4908FD531E53151F00CDC700 /* ProductList_search.json in Resources */ = {isa = PBXBuildFile; fileRef = 4908FD521E53151F00CDC700 /* ProductList_search.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		4908FD4B1E530B7000CDC700 /* Product.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Product.json; sourceTree = "<group>"; };
 		4908FD4D1E530B7800CDC700 /* Product_no_productId.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Product_no_productId.json; sourceTree = "<group>"; };
 		4908FD4F1E530B9900CDC700 /* JSONStubber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONStubber.swift; sourceTree = "<group>"; };
+		4908FD521E53151F00CDC700 /* ProductList_search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProductList_search.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 				4908FD4F1E530B9900CDC700 /* JSONStubber.swift */,
 				4908FD4B1E530B7000CDC700 /* Product.json */,
 				4908FD4D1E530B7800CDC700 /* Product_no_productId.json */,
+				4908FD521E53151F00CDC700 /* ProductList_search.json */,
 			);
 			name = Stubs;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4908FD531E53151F00CDC700 /* ProductList_search.json in Resources */,
 				4908FD4C1E530B7000CDC700 /* Product.json in Resources */,
 				4908FD4E1E530B7800CDC700 /* Product_no_productId.json in Resources */,
 			);
