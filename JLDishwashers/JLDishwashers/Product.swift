@@ -10,7 +10,15 @@ import Foundation
 
 struct Product: JSONParsable {
 
+    var productId: String?
+    var title: String?
+    var image: String?
+    var outOfStock: Bool?
+    
     init?(json: JSONObject?) {
-        // TODO
+        productId = json?["productId"] as? String
+        title = json?["title"] as? String
+        image = json?["image"] as? String
+        outOfStock = json?["outOfStock"] as? Bool
     }
 }
