@@ -1,5 +1,5 @@
 //
-//  HTTPClient+JSONTests.swift
+//  HTTPClientTests.swift
 //  JLDishwashers
 //
 //  Created by Dario Banno on 14/02/2017.
@@ -9,15 +9,15 @@
 import XCTest
 @testable import JLDishwashers
 
-class HTTPClient_JSONTests: XCTestCase {
+class HTTPClientTests: XCTestCase {
     
     var httpClient: HTTPClient!
     var mockURLSession: MockURLSession!
     
-
+    
     override func setUp() {
         super.setUp()
-
+        
         mockURLSession = MockURLSession()
         httpClient = HTTPClient(urlSession: mockURLSession)
     }
@@ -27,23 +27,26 @@ class HTTPClient_JSONTests: XCTestCase {
     }
     
     
-    func test_valid_request_with_some_JSON_and_no_error_response_succeeds() {
+    func test_valid_request_with_some_data_and_no_error_response_succeeds() {
         
         // GIVEN I have a request with a valid URL
         let path = "http://www.apptown.io"
         
+        // AND I'm expecting a string as a response
+        let stringResponse = "Try our new hamburger: The McDonald Trump!"
+        
         // AND I mock the response to return data and no error
-        let someJSON = ["name":"Json Lewis"] as [String: Any]
-        mockURLSession.responseData = try! JSONSerialization.data(withJSONObject: someJSON, options: .prettyPrinted)
+        let someData = stringResponse.data(using: String.Encoding.utf8)
+        mockURLSession.responseData = someData
         mockURLSession.responseError = nil
         
         // WHEN I send a service request
         let asyncExpectation = expectation(description: #function)
-        var responseJSON: [String: Any]?
+        var responseData: Data?
         var responseError: HTTPClientError?
         
-        httpClient.requestJSON(method: .get, path: path) { (jsonObject: [String : Any]?, error: HTTPClientError?) in
-            responseJSON = jsonObject
+        httpClient.requestData(method: .get, path: path) { (data: Data?, error: HTTPClientError?) in
+            responseData = data
             responseError = error
             asyncExpectation.fulfill()
         }
@@ -53,8 +56,11 @@ class HTTPClient_JSONTests: XCTestCase {
             XCTAssertNil(error)
         }
         
-        // AND response JSON should not be nil
-        XCTAssertNotNil(responseJSON)
+        // AND response data should not be nil
+        XCTAssertNotNil(responseData)
+        
+        // AND response data should match the original string
+        XCTAssertEqual(String(data: responseData!, encoding: String.Encoding.utf8), stringResponse)
         
         // AND response error should be nil
         XCTAssertNil(responseError)
@@ -71,11 +77,11 @@ class HTTPClient_JSONTests: XCTestCase {
         
         // WHEN I send a service request
         let asyncExpectation = expectation(description: #function)
-        var responseJSON: [String: Any]?
+        var responseData: Data?
         var responseError: HTTPClientError?
         
-        httpClient.requestJSON(method: .get, path: path) { (jsonObject: [String : Any]?, error: HTTPClientError?) in
-            responseJSON = jsonObject
+        httpClient.requestData(method: .get, path: path) { (data: Data?, error: HTTPClientError?) in
+            responseData = data
             responseError = error
             asyncExpectation.fulfill()
         }
@@ -85,10 +91,10 @@ class HTTPClient_JSONTests: XCTestCase {
             XCTAssertNil(error)
         }
         
-        // AND response JSON should be nil
-        XCTAssertNil(responseJSON)
+        // AND response data should be nil
+        XCTAssertNil(responseData)
         
-        // AND response error should be Nil
+        // AND response error should be nil
         XCTAssertNil(responseError)
     }
     
@@ -99,11 +105,11 @@ class HTTPClient_JSONTests: XCTestCase {
         
         // WHEN I send a service request
         let asyncExpectation = expectation(description: #function)
-        var responseJSON: [String: Any]?
+        var responseData: Data?
         var responseError: HTTPClientError?
         
-        httpClient.requestJSON(method: .get, path: path) { (jsonObject: [String : Any]?, error: HTTPClientError?) in
-            responseJSON = jsonObject
+        httpClient.requestData(method: .get, path: path) { (data: Data?, error: HTTPClientError?) in
+            responseData = data
             responseError = error
             asyncExpectation.fulfill()
         }
@@ -114,42 +120,10 @@ class HTTPClient_JSONTests: XCTestCase {
         }
         
         // AND response JSON should be nil
-        XCTAssertNil(responseJSON)
+        XCTAssertNil(responseData)
         
         // AND response error should be invalid request
         guard case .invalidRequestURL = responseError! else {
-            XCTFail(#function)
-            return
-        }
-    }
-    
-    func test_request_with_malformed_JSON_returns_error() {
-        
-        // GIVEN I have a request with an unserializable JSON
-        struct SomeStruct { var someValue: Int } // this is not compatible with JSONSerialization
-        let unserializableJSON = ["asd":SomeStruct(someValue: 1)]
-        
-        // WHEN I send a service request
-        let asyncExpectation = expectation(description: #function)
-        var responseJSON: [String: Any]?
-        var responseError: HTTPClientError?
-        
-        httpClient.requestJSON(method: .post, path: "http://apptown.io", body: unserializableJSON) { (jsonObject: [String : Any]?, error: HTTPClientError?) in
-            responseJSON = jsonObject
-            responseError = error
-            asyncExpectation.fulfill()
-        }
-        
-        // THEN I should get a response within 2 seconds
-        waitForExpectations(timeout: 2) { (error) in
-            XCTAssertNil(error)
-        }
-        
-        // AND response JSON should be nil
-        XCTAssertNil(responseJSON)
-        
-        // AND response error should be invalid request
-        guard case .invalidRequestJSON = responseError! else {
             XCTFail(#function)
             return
         }
@@ -163,11 +137,11 @@ class HTTPClient_JSONTests: XCTestCase {
         
         // WHEN I send a service request
         let asyncExpectation = expectation(description: #function)
-        var responseJSON: [String: Any]?
+        var responseData: Data?
         var responseError: HTTPClientError?
         
-        httpClient.requestJSON(method: .post, path: "http://apptown.io") { (jsonObject: [String : Any]?, error: HTTPClientError?) in
-            responseJSON = jsonObject
+        httpClient.requestData(method: .post, path: "http://apptown.io") { (data: Data?, error: HTTPClientError?) in
+            responseData = data
             responseError = error
             asyncExpectation.fulfill()
         }
@@ -177,8 +151,8 @@ class HTTPClient_JSONTests: XCTestCase {
             XCTAssertNil(error)
         }
         
-        // AND response JSON should be nil
-        XCTAssertNil(responseJSON)
+        // AND response data should be nil
+        XCTAssertNil(responseData)
         
         // AND response error should be invalid response
         guard case .unexpectedResponse(_) = responseError! else {
@@ -194,11 +168,11 @@ class HTTPClient_JSONTests: XCTestCase {
         
         // WHEN I send a service request
         let asyncExpectation = expectation(description: #function)
-        var responseJSON: [String: Any]?
+        var responseData: Data?
         var responseError: HTTPClientError?
         
-        httpClient.requestJSON(method: .post, path: "http://apptown.io") { (jsonObject: [String : Any]?, error: HTTPClientError?) in
-            responseJSON = jsonObject
+        httpClient.requestData(method: .post, path: "http://apptown.io") { (data: Data?, error: HTTPClientError?) in
+            responseData = data
             responseError = error
             asyncExpectation.fulfill()
         }
@@ -208,8 +182,8 @@ class HTTPClient_JSONTests: XCTestCase {
             XCTAssertNil(error)
         }
         
-        // AND response JSON should be nil
-        XCTAssertNil(responseJSON)
+        // AND response data should be nil
+        XCTAssertNil(responseData)
         
         // AND response error should be no Data
         guard case .unexpectedResponseNoData = responseError! else {
