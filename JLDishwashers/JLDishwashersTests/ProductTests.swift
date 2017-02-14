@@ -37,6 +37,9 @@ class ProductTests: XCTestCase {
         XCTAssertEqual(product?.image, "//johnlewis.scene7.com/is/image/JohnLewis/234326372?")
         XCTAssertEqual(product?.title, "Bosch SMV53M40GB Fully Integrated Dishwasher")
         XCTAssertEqual(product?.outOfStock, false)
+        XCTAssertNotNil(product?.price)
+        XCTAssertEqual(product?.price?.now, "499.00")
+        XCTAssertEqual(product?.price?.currency, "GBP")
     }
     
     func test_product_is_not_created_when_JSON_is_incomplete() {

@@ -14,12 +14,14 @@ struct Product: JSONParsable {
     var title: String?
     var image: String?
     var outOfStock: Bool?
+    var price: Price?
     
     init?(json: JSONObject?) {
         productId = json?["productId"] as? String
         title = json?["title"] as? String
         image = json?["image"] as? String
         outOfStock = json?["outOfStock"] as? Bool
+        price = Price(json: json?["price"] as? JSONObject)
         
         // Validate model
         guard productId != nil else {
