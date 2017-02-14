@@ -1,0 +1,33 @@
+{
+    "type": "product",
+    "title": "Bosch SMV53M40GB Fully Integrated Dishwasher",
+    "code": "88701205",
+    "averageRating": 4.5798,
+    "reviews": 119,
+    "price": {
+        "was": "",
+        "then1": "",
+        "then2": "",
+        "now": "499.00",
+        "uom": "",
+        "currency": "GBP"
+    },
+    "image": "//johnlewis.scene7.com/is/image/JohnLewis/234326372?",
+    "additionalServices": ["2 year guarantee included", "5 years Added Care for your home appliance (includes guarantee period) £95.00"],
+    "displaySpecialOffer": "",
+    "promoMessages": {
+        "priceMatched": "",
+        "offer": "",
+        "customPromotionalMessage": "",
+        "bundleHeadline": "",
+        "customSpecialOffer": {}
+    },
+    "colorSwatches": [],
+    "colorSwatchSelected": 0,
+    "colorWheelMessage": "",
+    "outOfStock": false,
+    "emailMeWhenAvailable": false,
+    "availabilityMessage": "",
+    "compare": true,
+    "fabric": ""
+}
