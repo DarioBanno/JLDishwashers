@@ -10,16 +10,31 @@ import UIKit
 
 class ProductListViewController: UICollectionViewController {
 
+    var productCategory = "dishwasher"
+    var productPageSize = 20
+
+    let dataSource = ProductListCollectionViewDataSource()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        collectionView!.dataSource = dataSource
+        collectionView!.registerNib(forClass: ProductListCollectionViewCell.self)
+        
+        loadProductList()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func loadProductList() {
+        NetworkManager.shared.productListService.search(query: productCategory, pageSize: productPageSize) { (products, error) in
+            DispatchQueue.main.async { [weak self] in
+                guard let products = products, error == nil else {
+                    // TODO: trigger error
+                    return
+                }
+                
+                self?.dataSource.products = products
+                self?.collectionView?.reloadData()
+            }
+        }
     }
-
-
 }
-
