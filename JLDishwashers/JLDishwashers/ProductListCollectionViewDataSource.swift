@@ -18,8 +18,7 @@ class ProductListCollectionViewDataSource: NSObject, UICollectionViewDataSource 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell: ProductListCollectionViewCell = collectionView.dequeueNib(at: indexPath)!
-        cell.label.text = products[indexPath.row].productId
-        cell.backgroundColor = .yellow
+        cell.configure(from: products[indexPath.row])
         return cell
     }
     

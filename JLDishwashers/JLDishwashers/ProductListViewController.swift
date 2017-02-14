@@ -17,6 +17,11 @@ class ProductListViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "Dishwashers"
+        
+        let collectionViewFlowLayout = collectionView!.collectionViewLayout as! UICollectionViewFlowLayout
+        collectionViewFlowLayout.itemSize = CGSize(width: 200, height: 300)
 
         collectionView!.dataSource = dataSource
         collectionView!.registerNib(forClass: ProductListCollectionViewCell.self)
@@ -28,7 +33,6 @@ class ProductListViewController: UICollectionViewController {
         NetworkManager.shared.productListService.search(query: productCategory, pageSize: productPageSize) { (products, error) in
             DispatchQueue.main.async { [weak self] in
                 guard let products = products, error == nil else {
-                    // TODO: trigger error
                     return
                 }
                 

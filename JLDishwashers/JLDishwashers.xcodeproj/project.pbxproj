@@ -41,6 +41,7 @@
 		4908FD691E532C3100CDC700 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD681E532C3100CDC700 /* UICollectionView+Reusable.swift */; };
 		4908FD731E5333E600CDC700 /* XCTest+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD721E5333E600CDC700 /* XCTest+Bundle.swift */; };
 		4908FD751E5364F500CDC700 /* HTTPClient+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD741E5364F500CDC700 /* HTTPClient+JSON.swift */; };
+		4908FD771E53663F00CDC700 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD761E53663F00CDC700 /* HTTPClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		4908FD681E532C3100CDC700 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		4908FD721E5333E600CDC700 /* XCTest+Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTest+Bundle.swift"; sourceTree = "<group>"; };
 		4908FD741E5364F500CDC700 /* HTTPClient+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPClient+JSON.swift"; sourceTree = "<group>"; };
+		4908FD761E53663F00CDC700 /* HTTPClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				4908FD241E52FA3800CDC700 /* JLDishwashersTests.swift */,
+				4908FD761E53663F00CDC700 /* HTTPClientTests.swift */,
 				4908FD341E52FE3300CDC700 /* HTTPClient+JSONTests.swift */,
 				4908FD3D1E53037600CDC700 /* ProductListServiceTests.swift */,
 				4908FD441E53093100CDC700 /* JSONParsableTests.swift */,
@@ -378,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4908FD771E53663F00CDC700 /* HTTPClientTests.swift in Sources */,
 				4908FD451E53093100CDC700 /* JSONParsableTests.swift in Sources */,
 				4908FD551E5315FD00CDC700 /* PriceTests.swift in Sources */,
 				4908FD401E53040700CDC700 /* MockURLSession.swift in Sources */,
