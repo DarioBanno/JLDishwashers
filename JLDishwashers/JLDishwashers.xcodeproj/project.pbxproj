@@ -23,6 +23,8 @@
 		4908FD401E53040700CDC700 /* MockURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD3F1E53040700CDC700 /* MockURLSession.swift */; };
 		4908FD431E53091900CDC700 /* JSONParsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD421E53091900CDC700 /* JSONParsable.swift */; };
 		4908FD451E53093100CDC700 /* JSONParsableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD441E53093100CDC700 /* JSONParsableTests.swift */; };
+		4908FD481E530AFD00CDC700 /* ProductTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD471E530AFD00CDC700 /* ProductTests.swift */; };
+		4908FD4A1E530B1F00CDC700 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD491E530B1F00CDC700 /* Product.swift */; };
 		4908FD4C1E530B7000CDC700 /* Product.json in Resources */ = {isa = PBXBuildFile; fileRef = 4908FD4B1E530B7000CDC700 /* Product.json */; };
 		4908FD4E1E530B7800CDC700 /* Product_no_productId.json in Resources */ = {isa = PBXBuildFile; fileRef = 4908FD4D1E530B7800CDC700 /* Product_no_productId.json */; };
 		4908FD501E530B9900CDC700 /* JSONStubber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD4F1E530B9900CDC700 /* JSONStubber.swift */; };
@@ -59,6 +61,8 @@
 		4908FD3F1E53040700CDC700 /* MockURLSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLSession.swift; sourceTree = "<group>"; };
 		4908FD421E53091900CDC700 /* JSONParsable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParsable.swift; sourceTree = "<group>"; };
 		4908FD441E53093100CDC700 /* JSONParsableTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParsableTests.swift; sourceTree = "<group>"; };
+		4908FD471E530AFD00CDC700 /* ProductTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductTests.swift; sourceTree = "<group>"; };
+		4908FD491E530B1F00CDC700 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		4908FD4B1E530B7000CDC700 /* Product.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Product.json; sourceTree = "<group>"; };
 		4908FD4D1E530B7800CDC700 /* Product_no_productId.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Product_no_productId.json; sourceTree = "<group>"; };
 		4908FD4F1E530B9900CDC700 /* JSONStubber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONStubber.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 				4908FD341E52FE3300CDC700 /* HTTPClientTests.swift */,
 				4908FD3D1E53037600CDC700 /* ProductListServiceTests.swift */,
 				4908FD441E53093100CDC700 /* JSONParsableTests.swift */,
+				4908FD471E530AFD00CDC700 /* ProductTests.swift */,
 				4908FD511E530BB000CDC700 /* Stubs */,
 				4908FD411E53042A00CDC700 /* Mocks */,
 				4908FD261E52FA3800CDC700 /* Info.plist */,
@@ -161,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				4908FD421E53091900CDC700 /* JSONParsable.swift */,
+				4908FD491E530B1F00CDC700 /* Product.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 			files = (
 				4908FD3B1E53033F00CDC700 /* ServiceConfiguration.swift in Sources */,
 				4908FD431E53091900CDC700 /* JSONParsable.swift in Sources */,
+				4908FD4A1E530B1F00CDC700 /* Product.swift in Sources */,
 				4908FD301E52FD7000CDC700 /* NetworkManager.swift in Sources */,
 				4908FD121E52FA3800CDC700 /* ViewController.swift in Sources */,
 				4908FD371E53031300CDC700 /* Service.swift in Sources */,
@@ -303,6 +310,7 @@
 				4908FD351E52FE3300CDC700 /* HTTPClientTests.swift in Sources */,
 				4908FD251E52FA3800CDC700 /* JLDishwashersTests.swift in Sources */,
 				4908FD501E530B9900CDC700 /* JSONStubber.swift in Sources */,
+				4908FD481E530AFD00CDC700 /* ProductTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
