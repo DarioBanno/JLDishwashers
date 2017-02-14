@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ProductListViewController.swift
 //  JLDishwashers
 //
 //  Created by Dario Banno on 14/02/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ProductListViewController: UICollectionViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4908FD101E52FA3800CDC700 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD0F1E52FA3800CDC700 /* AppDelegate.swift */; };
-		4908FD121E52FA3800CDC700 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD111E52FA3800CDC700 /* ViewController.swift */; };
+		4908FD121E52FA3800CDC700 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD111E52FA3800CDC700 /* ProductListViewController.swift */; };
 		4908FD151E52FA3800CDC700 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4908FD131E52FA3800CDC700 /* Main.storyboard */; };
 		4908FD171E52FA3800CDC700 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4908FD161E52FA3800CDC700 /* Assets.xcassets */; };
 		4908FD1A1E52FA3800CDC700 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4908FD181E52FA3800CDC700 /* LaunchScreen.storyboard */; };
@@ -49,7 +49,7 @@
 /* Begin PBXFileReference section */
 		4908FD0C1E52FA3800CDC700 /* JLDishwashers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLDishwashers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4908FD0F1E52FA3800CDC700 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4908FD111E52FA3800CDC700 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4908FD111E52FA3800CDC700 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		4908FD141E52FA3800CDC700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4908FD161E52FA3800CDC700 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4908FD191E52FA3800CDC700 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -120,7 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				4908FD0F1E52FA3800CDC700 /* AppDelegate.swift */,
-				4908FD111E52FA3800CDC700 /* ViewController.swift */,
+				4908FD111E52FA3800CDC700 /* ProductListViewController.swift */,
 				4908FD461E53098D00CDC700 /* Models */,
 				4908FD311E52FD7500CDC700 /* Network */,
 				4908FD131E52FA3800CDC700 /* Main.storyboard */,
@@ -315,7 +315,7 @@
 				4908FD4A1E530B1F00CDC700 /* Product.swift in Sources */,
 				4908FD571E53161200CDC700 /* Price.swift in Sources */,
 				4908FD301E52FD7000CDC700 /* NetworkManager.swift in Sources */,
-				4908FD121E52FA3800CDC700 /* ViewController.swift in Sources */,
+				4908FD121E52FA3800CDC700 /* ProductListViewController.swift in Sources */,
 				4908FD371E53031300CDC700 /* Service.swift in Sources */,
 				4908FD391E53032600CDC700 /* ProductListService.swift in Sources */,
 				4908FD331E52FD8C00CDC700 /* HTTPClient.swift in Sources */,
