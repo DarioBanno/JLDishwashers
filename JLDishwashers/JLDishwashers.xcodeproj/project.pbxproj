@@ -15,7 +15,7 @@
 		4908FD251E52FA3800CDC700 /* JLDishwashersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD241E52FA3800CDC700 /* JLDishwashersTests.swift */; };
 		4908FD301E52FD7000CDC700 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD2F1E52FD7000CDC700 /* NetworkManager.swift */; };
 		4908FD331E52FD8C00CDC700 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD321E52FD8C00CDC700 /* HTTPClient.swift */; };
-		4908FD351E52FE3300CDC700 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD341E52FE3300CDC700 /* HTTPClientTests.swift */; };
+		4908FD351E52FE3300CDC700 /* HTTPClient+JSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD341E52FE3300CDC700 /* HTTPClient+JSONTests.swift */; };
 		4908FD371E53031300CDC700 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD361E53031300CDC700 /* Service.swift */; };
 		4908FD391E53032600CDC700 /* ProductListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD381E53032600CDC700 /* ProductListService.swift */; };
 		4908FD3B1E53033F00CDC700 /* ServiceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD3A1E53033F00CDC700 /* ServiceConfiguration.swift */; };
@@ -40,6 +40,7 @@
 		4908FD661E532AC600CDC700 /* ProductListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD651E532AC600CDC700 /* ProductListCollectionViewCell.swift */; };
 		4908FD691E532C3100CDC700 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD681E532C3100CDC700 /* UICollectionView+Reusable.swift */; };
 		4908FD731E5333E600CDC700 /* XCTest+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD721E5333E600CDC700 /* XCTest+Bundle.swift */; };
+		4908FD751E5364F500CDC700 /* HTTPClient+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD741E5364F500CDC700 /* HTTPClient+JSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +66,7 @@
 		4908FD261E52FA3800CDC700 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4908FD2F1E52FD7000CDC700 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		4908FD321E52FD8C00CDC700 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
-		4908FD341E52FE3300CDC700 /* HTTPClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
+		4908FD341E52FE3300CDC700 /* HTTPClient+JSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPClient+JSONTests.swift"; sourceTree = "<group>"; };
 		4908FD361E53031300CDC700 /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		4908FD381E53032600CDC700 /* ProductListService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListService.swift; sourceTree = "<group>"; };
 		4908FD3A1E53033F00CDC700 /* ServiceConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceConfiguration.swift; sourceTree = "<group>"; };
@@ -90,6 +91,7 @@
 		4908FD651E532AC600CDC700 /* ProductListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductListCollectionViewCell.swift; sourceTree = "<group>"; };
 		4908FD681E532C3100CDC700 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		4908FD721E5333E600CDC700 /* XCTest+Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTest+Bundle.swift"; sourceTree = "<group>"; };
+		4908FD741E5364F500CDC700 /* HTTPClient+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPClient+JSON.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				4908FD241E52FA3800CDC700 /* JLDishwashersTests.swift */,
-				4908FD341E52FE3300CDC700 /* HTTPClientTests.swift */,
+				4908FD341E52FE3300CDC700 /* HTTPClient+JSONTests.swift */,
 				4908FD3D1E53037600CDC700 /* ProductListServiceTests.swift */,
 				4908FD441E53093100CDC700 /* JSONParsableTests.swift */,
 				4908FD471E530AFD00CDC700 /* ProductTests.swift */,
@@ -169,6 +171,7 @@
 			children = (
 				4908FD2F1E52FD7000CDC700 /* NetworkManager.swift */,
 				4908FD321E52FD8C00CDC700 /* HTTPClient.swift */,
+				4908FD741E5364F500CDC700 /* HTTPClient+JSON.swift */,
 				4908FD3C1E53035500CDC700 /* Services */,
 			);
 			name = Network;
@@ -365,6 +368,7 @@
 				4908FD391E53032600CDC700 /* ProductListService.swift in Sources */,
 				4908FD331E52FD8C00CDC700 /* HTTPClient.swift in Sources */,
 				4908FD661E532AC600CDC700 /* ProductListCollectionViewCell.swift in Sources */,
+				4908FD751E5364F500CDC700 /* HTTPClient+JSON.swift in Sources */,
 				4908FD101E52FA3800CDC700 /* AppDelegate.swift in Sources */,
 				4908FD5F1E531FE100CDC700 /* ProductListCollectionViewDataSource.swift in Sources */,
 			);
@@ -379,7 +383,7 @@
 				4908FD401E53040700CDC700 /* MockURLSession.swift in Sources */,
 				4908FD731E5333E600CDC700 /* XCTest+Bundle.swift in Sources */,
 				4908FD3E1E53037600CDC700 /* ProductListServiceTests.swift in Sources */,
-				4908FD351E52FE3300CDC700 /* HTTPClientTests.swift in Sources */,
+				4908FD351E52FE3300CDC700 /* HTTPClient+JSONTests.swift in Sources */,
 				4908FD251E52FA3800CDC700 /* JLDishwashersTests.swift in Sources */,
 				4908FD501E530B9900CDC700 /* JSONStubber.swift in Sources */,
 				4908FD481E530AFD00CDC700 /* ProductTests.swift in Sources */,

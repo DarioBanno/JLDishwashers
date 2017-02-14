@@ -12,7 +12,7 @@ struct NetworkManager {
     
     static let shared = NetworkManager(httpClient: HTTPClient(urlSession: URLSession.shared))
     
-    private let httpClient: HTTPClient
+    let httpClient: HTTPClient
     
     init(httpClient: HTTPClient) {
         self.httpClient = httpClient

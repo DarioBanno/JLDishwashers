@@ -26,24 +26,14 @@ enum HTTPClientError: Error {
 
 struct HTTPClient {
     
-    private let urlSession: URLSession
+    let urlSession: URLSession
     
     init(urlSession: URLSession) {
         self.urlSession = urlSession
     }
     
-    /// JSON Request
-    ///
-    /// Send a request with a JSON body (optional)
-    ///
-    /// Parameters:
-    /// - method: the http method for the request
-    /// - path: the URL path for the request
-    /// - body: (optional) a JSON formatted body for the request
-    /// - completion: completion block returning a JSON Object and error if any
-    
-    func request(method: HTTPRequestMethod, path: String, body: [String: Any]? = nil, completion: @escaping (_ result: [String: Any]?, _ error: HTTPClientError?) -> ()) {
-        
+    func requestData(method: HTTPRequestMethod, path: String, body: Data? = nil, contentType: String? = nil, completion: @escaping (_ result: Data?, _ error: HTTPClientError?) -> ()) {
+
         Logger.print(">>>>>>>>>> REQUEST")
         Logger.print("method: \(method)")
         Logger.print("path: \(path)")
@@ -60,13 +50,11 @@ struct HTTPClient {
         
         // Attach JSON body
         if let body = body {
-            guard JSONSerialization.isValidJSONObject(body), let postData = try? JSONSerialization.data(withJSONObject: body, options: .prettyPrinted) else {
-                Logger.print("-- Error: unable to generate JSON data from body \(body).")
-                completion(nil, .invalidRequestJSON)
-                return
-            }
-            urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            urlRequest.httpBody = postData
+            urlRequest.httpBody = body
+        }
+        
+        if let contentType = contentType {
+            urlRequest.setValue(contentType, forHTTPHeaderField: "Content-Type")
         }
         
         // Send request
@@ -104,15 +92,8 @@ struct HTTPClient {
                 Logger.print("Content: \(dataString)")
             }
             
-            // Check if response is serializable
-            guard let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] else {
-                Logger.print("-- Error: Malformed JSON.")
-                completion(nil, .invalidResponseJSON)
-                return
-            }
-            
-            completion(jsonObject, nil)
-            }.resume()
+            completion(data, nil)
+        }.resume()
     }
     
 }

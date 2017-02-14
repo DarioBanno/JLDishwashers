@@ -27,7 +27,7 @@ struct ProductListService: Service {
         let query = "?q=\(query)&pageSize=\(pageSize)&key=\(ServiceConfiguration.apiKey)"
         let requestPath = path + "/search" + query
         
-        httpClient.request(method: .get, path: requestPath) { (jsonObject, error) in
+        httpClient.requestJSON(method: .get, path: requestPath) { (jsonObject, error) in
             completion([Product](jsonArray: jsonObject?["products"] as? [JSONObject]), error)
         }
     }

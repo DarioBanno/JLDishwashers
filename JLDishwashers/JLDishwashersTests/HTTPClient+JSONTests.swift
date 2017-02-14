@@ -1,5 +1,5 @@
 //
-//  HTTPClientTests.swift
+//  HTTPClient+JSONTests.swift
 //  JLDishwashers
 //
 //  Created by Dario Banno on 14/02/2017.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import JLDishwashers
 
-class HTTPClientTests: XCTestCase {
+class HTTPClient_JSONTests: XCTestCase {
     
     var httpClient: HTTPClient!
     var mockURLSession: MockURLSession!
@@ -42,7 +42,7 @@ class HTTPClientTests: XCTestCase {
         var responseJSON: [String: Any]?
         var responseError: HTTPClientError?
         
-        httpClient.request(method: .get, path: path) { (jsonObject: [String : Any]?, error: HTTPClientError?) in
+        httpClient.requestJSON(method: .get, path: path) { (jsonObject: [String : Any]?, error: HTTPClientError?) in
             responseJSON = jsonObject
             responseError = error
             asyncExpectation.fulfill()
@@ -74,7 +74,7 @@ class HTTPClientTests: XCTestCase {
         var responseJSON: [String: Any]?
         var responseError: HTTPClientError?
         
-        httpClient.request(method: .get, path: path) { (jsonObject: [String : Any]?, error: HTTPClientError?) in
+        httpClient.requestJSON(method: .get, path: path) { (jsonObject: [String : Any]?, error: HTTPClientError?) in
             responseJSON = jsonObject
             responseError = error
             asyncExpectation.fulfill()
@@ -102,7 +102,7 @@ class HTTPClientTests: XCTestCase {
         var responseJSON: [String: Any]?
         var responseError: HTTPClientError?
         
-        httpClient.request(method: .get, path: path) { (jsonObject: [String : Any]?, error: HTTPClientError?) in
+        httpClient.requestJSON(method: .get, path: path) { (jsonObject: [String : Any]?, error: HTTPClientError?) in
             responseJSON = jsonObject
             responseError = error
             asyncExpectation.fulfill()
@@ -134,7 +134,7 @@ class HTTPClientTests: XCTestCase {
         var responseJSON: [String: Any]?
         var responseError: HTTPClientError?
         
-        httpClient.request(method: .post, path: "http://apptown.io", body: unserializableJSON) { (jsonObject: [String : Any]?, error: HTTPClientError?) in
+        httpClient.requestJSON(method: .post, path: "http://apptown.io", body: unserializableJSON) { (jsonObject: [String : Any]?, error: HTTPClientError?) in
             responseJSON = jsonObject
             responseError = error
             asyncExpectation.fulfill()
@@ -166,7 +166,7 @@ class HTTPClientTests: XCTestCase {
         var responseJSON: [String: Any]?
         var responseError: HTTPClientError?
         
-        httpClient.request(method: .post, path: "http://apptown.io") { (jsonObject: [String : Any]?, error: HTTPClientError?) in
+        httpClient.requestJSON(method: .post, path: "http://apptown.io") { (jsonObject: [String : Any]?, error: HTTPClientError?) in
             responseJSON = jsonObject
             responseError = error
             asyncExpectation.fulfill()
@@ -197,7 +197,7 @@ class HTTPClientTests: XCTestCase {
         var responseJSON: [String: Any]?
         var responseError: HTTPClientError?
         
-        httpClient.request(method: .post, path: "http://apptown.io") { (jsonObject: [String : Any]?, error: HTTPClientError?) in
+        httpClient.requestJSON(method: .post, path: "http://apptown.io") { (jsonObject: [String : Any]?, error: HTTPClientError?) in
             responseJSON = jsonObject
             responseError = error
             asyncExpectation.fulfill()
