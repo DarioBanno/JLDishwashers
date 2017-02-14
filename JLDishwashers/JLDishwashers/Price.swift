@@ -25,6 +25,9 @@ struct Price: JSONParsable {
         uom = json?["uom"] as? String
         currency = json?["currency"] as? String
 
-        // TODO: validation
+        // Validate model
+        guard now != nil && currency != nil else {
+            return nil
+        }
     }
 }
