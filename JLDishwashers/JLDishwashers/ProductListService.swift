@@ -24,6 +24,12 @@ struct ProductListService: Service {
     }
     
     func search(query: String, pageSize: Int, completion: @escaping (_ products: [Product]?, _ error: HTTPClientError?) -> ()) {
+        let query = "?q=\(query)&pageSize=\(pageSize)&key=\(ServiceConfiguration.apiKey)"
+        let requestPath = path + "/search" + query
+        
+        httpClient.request(method: .get, path: requestPath) { (jsonObject, error) in
+            completion([Product](jsonArray: jsonObject?["products"] as? [JSONObject]), error)
+        }
     }
     
 }
