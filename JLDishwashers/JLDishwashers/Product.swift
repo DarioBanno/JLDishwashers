@@ -20,5 +20,10 @@ struct Product: JSONParsable {
         title = json?["title"] as? String
         image = json?["image"] as? String
         outOfStock = json?["outOfStock"] as? Bool
+        
+        // Validate model
+        guard productId != nil else {
+            return nil
+        }
     }
 }
