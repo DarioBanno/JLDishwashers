@@ -592,6 +592,7 @@
 				4908FD2B1E52FA3800CDC700 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4908FD2C1E52FA3800CDC700 /* Build configuration list for PBXNativeTarget "JLDishwashersTests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +601,7 @@
 				4908FD2E1E52FA3800CDC700 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
