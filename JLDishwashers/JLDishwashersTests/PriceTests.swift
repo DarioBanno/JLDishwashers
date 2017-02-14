@@ -32,11 +32,11 @@ class PriceTests: XCTestCase {
         XCTAssertNotNil(price)
         
         // AND should contain values from the JSON object
-//        XCTAssertEqual(price?.was, "123")
-//        XCTAssertEqual(price?.then1, "456")
-//        XCTAssertEqual(price?.then2, "789")
-//        XCTAssertEqual(price?.now, "123.00")
-//        XCTAssertEqual(price?.currency, "BTC")
+        XCTAssertEqual(price?.was, "123")
+        XCTAssertEqual(price?.then1, "456")
+        XCTAssertEqual(price?.then2, "789")
+        XCTAssertEqual(price?.now, "123.00")
+        XCTAssertEqual(price?.currency, "BTC")
     }
     
     func test_price_is_not_created_when_JSON_has_no_currency() {
