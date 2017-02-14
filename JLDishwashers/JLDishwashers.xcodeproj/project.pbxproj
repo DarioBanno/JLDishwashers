@@ -34,6 +34,7 @@
 		4908FD5B1E53169000CDC700 /* Price.json in Resources */ = {isa = PBXBuildFile; fileRef = 4908FD581E53169000CDC700 /* Price.json */; };
 		4908FD5C1E53169000CDC700 /* Price_no_currency.json in Resources */ = {isa = PBXBuildFile; fileRef = 4908FD591E53169000CDC700 /* Price_no_currency.json */; };
 		4908FD5D1E53169000CDC700 /* Price_no_now.json in Resources */ = {isa = PBXBuildFile; fileRef = 4908FD5A1E53169000CDC700 /* Price_no_now.json */; };
+		4908FD611E53223800CDC700 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD601E53223800CDC700 /* Logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		4908FD581E53169000CDC700 /* Price.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Price.json; sourceTree = "<group>"; };
 		4908FD591E53169000CDC700 /* Price_no_currency.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Price_no_currency.json; sourceTree = "<group>"; };
 		4908FD5A1E53169000CDC700 /* Price_no_now.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Price_no_now.json; sourceTree = "<group>"; };
+		4908FD601E53223800CDC700 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			children = (
 				4908FD0F1E52FA3800CDC700 /* AppDelegate.swift */,
 				4908FD111E52FA3800CDC700 /* ProductListViewController.swift */,
+				4908FD621E53226800CDC700 /* Utils */,
 				4908FD461E53098D00CDC700 /* Models */,
 				4908FD311E52FD7500CDC700 /* Network */,
 				4908FD131E52FA3800CDC700 /* Main.storyboard */,
@@ -197,6 +200,14 @@
 				4908FD5A1E53169000CDC700 /* Price_no_now.json */,
 			);
 			name = Stubs;
+			sourceTree = "<group>";
+		};
+		4908FD621E53226800CDC700 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4908FD601E53223800CDC700 /* Logger.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 				4908FD301E52FD7000CDC700 /* NetworkManager.swift in Sources */,
 				4908FD121E52FA3800CDC700 /* ProductListViewController.swift in Sources */,
 				4908FD371E53031300CDC700 /* Service.swift in Sources */,
+				4908FD611E53223800CDC700 /* Logger.swift in Sources */,
 				4908FD391E53032600CDC700 /* ProductListService.swift in Sources */,
 				4908FD331E52FD8C00CDC700 /* HTTPClient.swift in Sources */,
 				4908FD101E52FA3800CDC700 /* AppDelegate.swift in Sources */,

@@ -26,7 +26,7 @@ extension JSONParsable {
             case let value as NSObject:
                 json[label] = value
             default:
-                debugPrint("Error: \(label) is unserializable for value \(value)")
+                Logger.print("Error: \(label) is unserializable for value \(value)")
             }
         }
         

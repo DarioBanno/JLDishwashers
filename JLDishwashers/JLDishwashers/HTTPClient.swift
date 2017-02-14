@@ -44,14 +44,14 @@ struct HTTPClient {
     
     func request(method: HTTPRequestMethod, path: String, body: [String: Any]? = nil, completion: @escaping (_ result: [String: Any]?, _ error: HTTPClientError?) -> ()) {
         
-        debugPrint(">>>>>>>>>> REQUEST")
-        debugPrint("method: \(method)")
-        debugPrint("path: \(path)")
-        debugPrint("body: \(body)")
+        Logger.print(">>>>>>>>>> REQUEST")
+        Logger.print("method: \(method)")
+        Logger.print("path: \(path)")
+        Logger.print("body: \(body)")
         
         // Build request
         guard let url = URL(string: path) else {
-            debugPrint("-- Error: invalid URL for path \(path).")
+            Logger.print("-- Error: invalid URL for path \(path).")
             completion(nil, .invalidRequestURL)
             return
         }
@@ -61,7 +61,7 @@ struct HTTPClient {
         // Attach JSON body
         if let body = body {
             guard JSONSerialization.isValidJSONObject(body), let postData = try? JSONSerialization.data(withJSONObject: body, options: .prettyPrinted) else {
-                debugPrint("-- Error: unable to generate JSON data from body \(body).")
+                Logger.print("-- Error: unable to generate JSON data from body \(body).")
                 completion(nil, .invalidRequestJSON)
                 return
             }
@@ -73,40 +73,40 @@ struct HTTPClient {
         urlSession.dataTask(with: urlRequest) {
             (data: Data?, response: URLResponse?, error: Error?) in
             
-            debugPrint("<<<<<<<<<< RESPONSE")
-            debugPrint("Request: \(urlRequest)")
-            debugPrint("Status Code: \((response as? HTTPURLResponse)?.statusCode)")
-            debugPrint("Response: \(data)")
+            Logger.print("<<<<<<<<<< RESPONSE")
+            Logger.print("Request: \(urlRequest)")
+            Logger.print("Status Code: \((response as? HTTPURLResponse)?.statusCode)")
+            Logger.print("Response: \(data)")
             
             // Check for error
             guard error == nil else {
-                debugPrint("-- Error Response: \(error)")
+                Logger.print("-- Error Response: \(error)")
                 completion(nil, .unexpectedResponse(error: error!))
                 return
             }
             
             // Data is always expected
             guard let data = data else {
-                debugPrint("-- Error: No data.")
+                Logger.print("-- Error: No data.")
                 completion(nil, .unexpectedResponseNoData)
                 return
             }
             
             // We are cool with data with no content (this is not an error).
             guard data.count > 0 else {
-                debugPrint("-- No content.")
+                Logger.print("-- No content.")
                 completion(nil, nil)
                 return
             }
             
             // Print content
             if let dataString = String(data: data, encoding: .utf8) {
-                debugPrint("Content: \(dataString)")
+                Logger.print("Content: \(dataString)")
             }
             
             // Check if response is serializable
             guard let jsonObject = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] else {
-                debugPrint("-- Error: Malformed JSON.")
+                Logger.print("-- Error: Malformed JSON.")
                 completion(nil, .invalidResponseJSON)
                 return
             }
