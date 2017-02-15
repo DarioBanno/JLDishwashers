@@ -30,7 +30,7 @@ class HTTPClientTests: XCTestCase {
     func test_valid_request_with_some_data_and_no_error_response_succeeds() {
         
         // GIVEN I have a request with a valid URL
-        let path = "http://www.apptown.io"
+        let url = URL(string: "http://www.apptown.io")!
         
         // AND I'm expecting a string as a response
         let stringResponse = "Try our new hamburger: The McDonald Trump!"
@@ -45,7 +45,7 @@ class HTTPClientTests: XCTestCase {
         var responseData: Data?
         var responseError: HTTPClientError?
         
-        httpClient.requestData(method: .get, path: path) { (data: Data?, error: HTTPClientError?) in
+        httpClient.requestData(method: .get, url: url) { (data: Data?, error: HTTPClientError?) in
             responseData = data
             responseError = error
             asyncExpectation.fulfill()
@@ -69,7 +69,7 @@ class HTTPClientTests: XCTestCase {
     func test_valid_request_with_empty_data_no_error_response_succeeds() {
         
         // GIVEN I have a request with a valid URL
-        let path = "http://www.apptown.io"
+        let url = URL(string: "http://www.apptown.io")!
         
         // AND I mock the response to return empty data and no error
         mockURLSession.responseData = Data()
@@ -80,7 +80,7 @@ class HTTPClientTests: XCTestCase {
         var responseData: Data?
         var responseError: HTTPClientError?
         
-        httpClient.requestData(method: .get, path: path) { (data: Data?, error: HTTPClientError?) in
+        httpClient.requestData(method: .get, url: url) { (data: Data?, error: HTTPClientError?) in
             responseData = data
             responseError = error
             asyncExpectation.fulfill()
@@ -98,37 +98,6 @@ class HTTPClientTests: XCTestCase {
         XCTAssertNil(responseError)
     }
     
-    func test_request_with_empty_URL_returns_error() {
-        
-        // GIVEN I have a request with an Empty URL
-        let path = ""
-        
-        // WHEN I send a service request
-        let asyncExpectation = expectation(description: #function)
-        var responseData: Data?
-        var responseError: HTTPClientError?
-        
-        httpClient.requestData(method: .get, path: path) { (data: Data?, error: HTTPClientError?) in
-            responseData = data
-            responseError = error
-            asyncExpectation.fulfill()
-        }
-        
-        // THEN I should get a response within 2 seconds
-        waitForExpectations(timeout: 2) { (error) in
-            XCTAssertNil(error)
-        }
-        
-        // AND response JSON should be nil
-        XCTAssertNil(responseData)
-        
-        // AND response error should be invalid request
-        guard case .invalidRequestURL = responseError! else {
-            XCTFail(#function)
-            return
-        }
-    }
-    
     func test_response_with_error_returns_error() {
         
         // GIVEN I have a response with an error
@@ -140,7 +109,7 @@ class HTTPClientTests: XCTestCase {
         var responseData: Data?
         var responseError: HTTPClientError?
         
-        httpClient.requestData(method: .post, path: "http://apptown.io") { (data: Data?, error: HTTPClientError?) in
+        httpClient.requestData(method: .post, url: URL(string: "http://apptown.io")!) { (data: Data?, error: HTTPClientError?) in
             responseData = data
             responseError = error
             asyncExpectation.fulfill()
@@ -171,7 +140,7 @@ class HTTPClientTests: XCTestCase {
         var responseData: Data?
         var responseError: HTTPClientError?
         
-        httpClient.requestData(method: .post, path: "http://apptown.io") { (data: Data?, error: HTTPClientError?) in
+        httpClient.requestData(method: .post, url: URL(string: "http://apptown.io")!) { (data: Data?, error: HTTPClientError?) in
             responseData = data
             responseError = error
             asyncExpectation.fulfill()

@@ -30,16 +30,18 @@ struct ProductListService: Service {
     func search(query: String, pageSize: Int, completion: @escaping (_ products: [Product]?, _ error: HTTPClientError?) -> ()) {
         let query = "?q=\(query)&pageSize=\(pageSize)&key=\(ServiceConfiguration.apiKey)"
         let requestPath = path + "/search" + query
+        let requestUrl = URL(string: requestPath)!
         
-        httpClient.requestJSON(method: .get, path: requestPath) { (jsonObject, error) in
+        httpClient.requestJSON(method: .get, url: requestUrl) { (jsonObject, error) in
             completion([Product](jsonArray: jsonObject?["products"] as? [JSONObject]), error)
         }
     }
     
     func fetch(byId productId: String, completion: @escaping (_ product: Product?, _ error: HTTPClientError?) -> ()) {
         let requestPath = path + "/(productId)?key=\(ServiceConfiguration.apiKey)"
+        let requestUrl = URL(string: requestPath)!
         
-        httpClient.requestJSON(method: .get, path: requestPath) { (jsonObject, error) in
+        httpClient.requestJSON(method: .get, url: requestUrl) { (jsonObject, error) in
             completion(Product(json: jsonObject), error)
         }
     }

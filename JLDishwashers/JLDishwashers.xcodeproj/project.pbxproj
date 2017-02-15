@@ -47,6 +47,7 @@
 		49C192301E54BC4B00F36F05 /* ImageSliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C1922F1E54BC4B00F36F05 /* ImageSliderViewController.xib */; };
 		49C192321E54BDAC00F36F05 /* ImageSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192311E54BDAC00F36F05 /* ImageSliderViewController.swift */; };
 		49C192341E54C50900F36F05 /* UIViewController+Embedment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192331E54C50900F36F05 /* UIViewController+Embedment.swift */; };
+		49C192361E54DA0200F36F05 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192351E54DA0200F36F05 /* URLImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		49C1922F1E54BC4B00F36F05 /* ImageSliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageSliderViewController.xib; sourceTree = "<group>"; };
 		49C192311E54BDAC00F36F05 /* ImageSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSliderViewController.swift; sourceTree = "<group>"; };
 		49C192331E54C50900F36F05 /* UIViewController+Embedment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embedment.swift"; sourceTree = "<group>"; };
+		49C192351E54DA0200F36F05 /* URLImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 		4908FD671E532ADD00CDC700 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				49C192351E54DA0200F36F05 /* URLImageView.swift */,
 				4908FD651E532AC600CDC700 /* ProductListCollectionViewCell.swift */,
 				4908FD631E532AB800CDC700 /* ProductListCollectionViewCell.xib */,
 			);
@@ -402,6 +405,7 @@
 				4908FD5F1E531FE100CDC700 /* ProductListCollectionViewDataSource.swift in Sources */,
 				49C192091E54A5D300F36F05 /* ProductDetailsViewController.swift in Sources */,
 				49C192321E54BDAC00F36F05 /* ImageSliderViewController.swift in Sources */,
+				49C192361E54DA0200F36F05 /* URLImageView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

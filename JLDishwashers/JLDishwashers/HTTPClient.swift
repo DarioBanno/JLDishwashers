@@ -16,7 +16,6 @@ enum HTTPRequestMethod: String {
 }
 
 enum HTTPClientError: Error {
-    case invalidRequestURL
     case invalidRequestJSON
     case invalidResponseJSON
     case unexpectedResponseNoData
@@ -32,19 +31,14 @@ struct HTTPClient {
         self.urlSession = urlSession
     }
     
-    func requestData(method: HTTPRequestMethod, path: String, body: Data? = nil, contentType: String? = nil, completion: @escaping (_ result: Data?, _ error: HTTPClientError?) -> ()) {
+    func requestData(method: HTTPRequestMethod, url: URL, body: Data? = nil, contentType: String? = nil, completion: @escaping (_ result: Data?, _ error: HTTPClientError?) -> ()) {
 
         Logger.print(">>>>>>>>>> REQUEST")
         Logger.print("method: \(method)")
-        Logger.print("path: \(path)")
+        Logger.print("url: \(url)")
         Logger.print("body: \(body)")
         
         // Build request
-        guard let url = URL(string: path) else {
-            Logger.print("-- Error: invalid URL for path \(path).")
-            completion(nil, .invalidRequestURL)
-            return
-        }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         

@@ -22,7 +22,7 @@ extension HTTPClient {
     /// - body: (optional) a JSON formatted body for the request
     /// - completion: completion block returning a JSON Object and error if any
     
-    func requestJSON(method: HTTPRequestMethod, path: String, body: JSONObject? = nil, completion: @escaping (_ result: JSONObject?, _ error: HTTPClientError?) -> ()) {
+    func requestJSON(method: HTTPRequestMethod, url: URL, body: JSONObject? = nil, completion: @escaping (_ result: JSONObject?, _ error: HTTPClientError?) -> ()) {
         
         // Attach JSON body
         var jsonBody: Data? = nil
@@ -38,7 +38,7 @@ extension HTTPClient {
         }
         
         // Send request
-        requestData(method: method, path: path, body: jsonBody, contentType: "application/json") { (data: Data?, error: HTTPClientError?) in
+        requestData(method: method, url: url, body: jsonBody, contentType: "application/json") { (data: Data?, error: HTTPClientError?) in
             
             // Check data and propagate error if any
             guard let data = data, error == nil else {
