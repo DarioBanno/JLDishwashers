@@ -23,10 +23,19 @@ class ProductDetailsViewController: UIViewController {
         
         imageSliderViewController = ImageSliderViewController()
         imageSliderViewController.embed(in: imageSliderContainer)
+        
+        loadProductDetails()
     }
     
     func loadProductDetails() {
-        // TODO
+        NetworkManager.shared.productListService.fetch(byId: product.productId!) { (product: Product?, error: HTTPClientError?) in
+            DispatchQueue.main.async { [weak self] in
+                guard let urlStrings = product?.media?.images?.urls, error == nil else {
+                    return
+                }
+                self?.imageSliderViewController.configure(with: urlStrings.flatMap({ URL(httpsString: $0) }))
+            }
+        }
     }
     
 }

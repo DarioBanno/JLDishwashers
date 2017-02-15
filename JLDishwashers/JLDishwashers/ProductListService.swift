@@ -38,7 +38,7 @@ struct ProductListService: Service {
     }
     
     func fetch(byId productId: String, completion: @escaping (_ product: Product?, _ error: HTTPClientError?) -> ()) {
-        let requestPath = path + "/(productId)?key=\(ServiceConfiguration.apiKey)"
+        let requestPath = path + "/\(productId)?key=\(ServiceConfiguration.apiKey)"
         let requestUrl = URL(string: requestPath)!
         
         httpClient.requestJSON(method: .get, url: requestUrl) { (jsonObject, error) in
