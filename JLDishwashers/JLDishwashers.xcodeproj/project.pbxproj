@@ -41,6 +41,7 @@
 		4908FD731E5333E600CDC700 /* XCTest+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD721E5333E600CDC700 /* XCTest+Bundle.swift */; };
 		4908FD751E5364F500CDC700 /* HTTPClient+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD741E5364F500CDC700 /* HTTPClient+JSON.swift */; };
 		4908FD771E53663F00CDC700 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD761E53663F00CDC700 /* HTTPClientTests.swift */; };
+		49C192031E5475F300F36F05 /* ProductList_fetch_productId.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C192021E5475F300F36F05 /* ProductList_fetch_productId.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		4908FD721E5333E600CDC700 /* XCTest+Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTest+Bundle.swift"; sourceTree = "<group>"; };
 		4908FD741E5364F500CDC700 /* HTTPClient+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPClient+JSON.swift"; sourceTree = "<group>"; };
 		4908FD761E53663F00CDC700 /* HTTPClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
+		49C192021E5475F300F36F05 /* ProductList_fetch_productId.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProductList_fetch_productId.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 				4908FD521E53151F00CDC700 /* ProductList_search.json */,
 				4908FD581E53169000CDC700 /* Price.json */,
 				4908FD591E53169000CDC700 /* Price_no_currency.json */,
+				49C192021E5475F300F36F05 /* ProductList_fetch_productId.json */,
 				4908FD5A1E53169000CDC700 /* Price_no_now.json */,
 			);
 			name = Stubs;
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4908FD531E53151F00CDC700 /* ProductList_search.json in Resources */,
+				49C192031E5475F300F36F05 /* ProductList_fetch_productId.json in Resources */,
 				4908FD5C1E53169000CDC700 /* Price_no_currency.json in Resources */,
 				4908FD5B1E53169000CDC700 /* Price.json in Resources */,
 				4908FD5D1E53169000CDC700 /* Price_no_now.json in Resources */,

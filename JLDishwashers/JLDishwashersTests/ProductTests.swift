@@ -39,7 +39,6 @@ class ProductTests: XCTestCase {
         XCTAssertEqual(product?.image, "//johnlewis.scene7.com/is/image/JohnLewis/234326372?")
         XCTAssertEqual(product?.title, "Donald Trump Fully Integrated Dishwasher")
         XCTAssertEqual(product?.outOfStock, false)
-        XCTAssertNotNil(product?.price)
         XCTAssertEqual(product?.price?.now, "10,000,000.00")
         XCTAssertEqual(product?.price?.currency, "USD")
     }
@@ -56,4 +55,22 @@ class ProductTests: XCTestCase {
         XCTAssertNil(product)
     }
 
+    func test_product_is_created_from_JSON_ProductList_fetch_by_productId() {
+        
+        // GIVEN I have a JSON Object for product
+        let productJson = JSONStubber.load(file: "ProductList_fetch_productId")!
+        
+        // WHEN I create a Product from json
+        let product = Product(json: productJson)
+        
+        // THEN the product should not be nil
+        XCTAssertNotNil(product)
+        
+        // AND should contain values from the JSON object
+        XCTAssertEqual(product?.productId, "200876")
+        XCTAssertEqual(product?.title, "Leoncino Fully Integrated Dishwasher")
+        XCTAssertEqual(product?.price?.now, "1,000,000.00")
+        XCTAssertEqual(product?.price?.currency, "GBP")
+    }
+    
 }
