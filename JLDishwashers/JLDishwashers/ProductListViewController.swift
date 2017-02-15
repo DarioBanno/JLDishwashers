@@ -14,6 +14,7 @@ class ProductListViewController: UICollectionViewController {
     var productPageSize = 20
 
     let dataSource = ProductListCollectionViewDataSource()
+    var productDetailsViewController: ProductDetailsViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()

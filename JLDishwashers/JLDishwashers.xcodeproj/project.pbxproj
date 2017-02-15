@@ -44,6 +44,9 @@
 		49C192031E5475F300F36F05 /* ProductList_fetch_productId.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C192021E5475F300F36F05 /* ProductList_fetch_productId.json */; };
 		49C192091E54A5D300F36F05 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192081E54A5D300F36F05 /* ProductDetailsViewController.swift */; };
 		49C1920B1E54A5F900F36F05 /* ProductDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C1920A1E54A5F900F36F05 /* ProductDetailsViewController.xib */; };
+		49C192301E54BC4B00F36F05 /* ImageSliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C1922F1E54BC4B00F36F05 /* ImageSliderViewController.xib */; };
+		49C192321E54BDAC00F36F05 /* ImageSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192311E54BDAC00F36F05 /* ImageSliderViewController.swift */; };
+		49C192341E54C50900F36F05 /* UIViewController+Embedment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192331E54C50900F36F05 /* UIViewController+Embedment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		49C192021E5475F300F36F05 /* ProductList_fetch_productId.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProductList_fetch_productId.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		49C192081E54A5D300F36F05 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		49C1920A1E54A5F900F36F05 /* ProductDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailsViewController.xib; sourceTree = "<group>"; };
+		49C1922F1E54BC4B00F36F05 /* ImageSliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageSliderViewController.xib; sourceTree = "<group>"; };
+		49C192311E54BDAC00F36F05 /* ImageSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSliderViewController.swift; sourceTree = "<group>"; };
+		49C192331E54C50900F36F05 /* UIViewController+Embedment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embedment.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,10 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				4908FD0F1E52FA3800CDC700 /* AppDelegate.swift */,
-				4908FD111E52FA3800CDC700 /* ProductListViewController.swift */,
-				4908FD5E1E531FE100CDC700 /* ProductListCollectionViewDataSource.swift */,
-				49C192081E54A5D300F36F05 /* ProductDetailsViewController.swift */,
-				49C1920A1E54A5F900F36F05 /* ProductDetailsViewController.xib */,
+				49C1920C1E54A91700F36F05 /* Controllers */,
 				4908FD671E532ADD00CDC700 /* Views */,
 				4908FD461E53098D00CDC700 /* Models */,
 				4908FD311E52FD7500CDC700 /* Network */,
@@ -249,8 +252,22 @@
 			isa = PBXGroup;
 			children = (
 				4908FD681E532C3100CDC700 /* UICollectionView+Reusable.swift */,
+				49C192331E54C50900F36F05 /* UIViewController+Embedment.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		49C1920C1E54A91700F36F05 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4908FD111E52FA3800CDC700 /* ProductListViewController.swift */,
+				4908FD5E1E531FE100CDC700 /* ProductListCollectionViewDataSource.swift */,
+				49C192081E54A5D300F36F05 /* ProductDetailsViewController.swift */,
+				49C1920A1E54A5F900F36F05 /* ProductDetailsViewController.xib */,
+				49C192311E54BDAC00F36F05 /* ImageSliderViewController.swift */,
+				49C1922F1E54BC4B00F36F05 /* ImageSliderViewController.xib */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +360,7 @@
 				49C1920B1E54A5F900F36F05 /* ProductDetailsViewController.xib in Resources */,
 				4908FD641E532AB800CDC700 /* ProductListCollectionViewCell.xib in Resources */,
 				4908FD151E52FA3800CDC700 /* Main.storyboard in Resources */,
+				49C192301E54BC4B00F36F05 /* ImageSliderViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,12 +394,14 @@
 				4908FD371E53031300CDC700 /* Service.swift in Sources */,
 				4908FD611E53223800CDC700 /* Logger.swift in Sources */,
 				4908FD391E53032600CDC700 /* ProductListService.swift in Sources */,
+				49C192341E54C50900F36F05 /* UIViewController+Embedment.swift in Sources */,
 				4908FD331E52FD8C00CDC700 /* HTTPClient.swift in Sources */,
 				4908FD661E532AC600CDC700 /* ProductListCollectionViewCell.swift in Sources */,
 				4908FD751E5364F500CDC700 /* HTTPClient+JSON.swift in Sources */,
 				4908FD101E52FA3800CDC700 /* AppDelegate.swift in Sources */,
 				4908FD5F1E531FE100CDC700 /* ProductListCollectionViewDataSource.swift in Sources */,
 				49C192091E54A5D300F36F05 /* ProductDetailsViewController.swift in Sources */,
+				49C192321E54BDAC00F36F05 /* ImageSliderViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

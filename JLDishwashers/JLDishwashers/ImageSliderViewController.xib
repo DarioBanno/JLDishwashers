@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageSliderViewController" customModule="JLDishwashers" customModuleProvider="target">
+            <connections>
+                <outlet property="pageControl" destination="XVa-ln-q5t" id="ree-fH-81Y"/>
+                <outlet property="scrollView" destination="GMm-bm-fke" id="A2r-7C-gDW"/>
+                <outlet property="view" destination="iN0-l3-epB" id="S6l-hP-FmB"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GMm-bm-fke">
+                    <rect key="frame" x="0.0" y="0.0" width="350" height="313"/>
+                </scrollView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="XVa-ln-q5t">
+                    <rect key="frame" x="156" y="313" width="39" height="37"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="GMm-bm-fke" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CvU-sI-7t8"/>
+                <constraint firstItem="GMm-bm-fke" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="RkK-KX-x7d"/>
+                <constraint firstItem="XVa-ln-q5t" firstAttribute="top" secondItem="GMm-bm-fke" secondAttribute="bottom" id="WZg-c9-Pne"/>
+                <constraint firstAttribute="bottom" secondItem="XVa-ln-q5t" secondAttribute="bottom" id="drS-nU-MBs"/>
+                <constraint firstAttribute="trailing" secondItem="GMm-bm-fke" secondAttribute="trailing" id="nKL-1f-fMm"/>
+                <constraint firstItem="XVa-ln-q5t" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="snH-sv-1pS"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="9" y="-5"/>
+        </view>
+    </objects>
+</document>
