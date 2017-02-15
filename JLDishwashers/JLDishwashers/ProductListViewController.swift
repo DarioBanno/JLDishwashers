@@ -41,4 +41,10 @@ class ProductListViewController: UICollectionViewController {
             }
         }
     }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let productDetailsViewController = ProductDetailsViewController()
+        productDetailsViewController.product = dataSource.products[indexPath.row]
+        show(productDetailsViewController, sender: self)
+    }
 }
