@@ -10,8 +10,12 @@ import Foundation
 
 /// Service for fetching a list of Products
 ///
-/// Example:
+/// Examples:
+/// - Search
 /// https://api.johnlewis.com/v1/products/search?q=dishwasher&key=Wu1Xqn3vNrd1p7hqkvB6hEu0G9OrsYGb&pageSize=20
+///
+/// - Product details
+/// https://api.johnlewis.com/v1/products/{productId}?key=Wu1Xqn3vNrd1p7hqkvB6hEu0G9OrsYGb
 ///
 
 struct ProductListService: Service {
@@ -32,4 +36,7 @@ struct ProductListService: Service {
         }
     }
     
+    func fetch(byId productId: String, completion: @escaping (_ product: Product?, _ error: HTTPClientError?) -> ()) {
+        // TODO
+    }
 }
