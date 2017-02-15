@@ -23,7 +23,7 @@
         "bundleHeadline": "",
         "customSpecialOffer": {}
     },
-    "displaySpecialOffer": "",
+    "displaySpecialOffer": "Lea Special Offer",
     "setDetails": {},
     "templateType": "media-epic-prodtemplate",
     "skus": [{
@@ -98,7 +98,7 @@
                         "trialMessage": ""
                         }],
     "additionalServices": {
-        "includedServices": ["2 year guarantee included"],
+        "includedServices": ["Pasta with Pesto", "Patacones"],
         "optionalServices": [{
                              "id": "233568687",
                              "associatedProductId": "1465506",
@@ -143,7 +143,7 @@
         "returns": "<div class=\"par parsys\">\n <div class=\"cms30r section\">\n  <div class=\"free-html\"> \n   <style>#cq-returns-info p a{padding:0;} #cq-returns-info h2{padding:18px 0 16px 0; border-bottom: 1px solid #bfbdb7; font-size: 18px; font-weight: bold;} #cq-returns-info p{padding:0 0 6px;}\n   </style>\n   <div id=\"cq-returns-info\"> \n    <h2>Returns</h2> \n    <p>If youâ€™ve changed your mind about keeping your purchase, please return it in its original condition with proof of purchase and weâ€™ll exchange or refund it. Unless faulty, this should be within 35 days of receiving your order. By original condition, weâ€™d expect this to mean that youâ€™ve kept packaging and labels, and that the item is undamaged and unused.</p> \n    <p>You can return for free in the UK via John Lewis shops, Royal Mail, Collect+ or MyHermes. If you need to arrange collection of large or heavy items, call us on <strong>03456 049 049</strong>. For international returns queries, call us on <strong>+44 1698 545 454</strong></p> \n    <p>Youâ€™ll find returns information on your delivery note. Exceptions apply to certain products - <a href=\"/customer-services/information-about-ordering-and-returning-products#refund\">find out more about our refund policy</a></p>\n   </div>\n  </div>\n </div>\n</div>",
         "returnsHeadline": "<div class=\"par parsys\">\n <div class=\"cms30r section\">\n  <div class=\"free-html\"> \n   <style type=\"text/css\">.free-html a.more-details {   font-weight:normal;}}.returns-info { float:left;}.returns-info h2 {float:left;padding-right:10px;}.returns-info-link { padding:4px 0 15px 0;}\n   </style>\n   <div class=\"returns-info\">\n    <h2><a href=\"#tabinfo-returns\" class=\"tab-link\">Returns -</a></h2>\n    <div class=\"returns-info-link\">\n     <a href=\"#tabinfo-returns\" class=\"more-details \">See more details</a>\n    </div>\n   </div>\n  </div>\n </div>\n</div>",
         "termsAndConditions": "",
-        "productInformation": "<p><strong>Please note:</strong> The door panel shown is for illustration purposes only and is not included. Your kitchen supplier will be able to supply a door panel for this appliance to match your kitchen units.</p>\r\n<p>This Bosch SMV53M40GB integrated dishwasher boasts an impressive <strong>A++</strong> energy rating for an economical and environmentally friendly home.</p>\r\n<p>A heat exchanger is used for hygienic and efficient drying, while salt and rinse aid indicators give you feedback. This economical machine makes dishwashing easy and convenient in any household.</p>\r\n<p><strong>EcoSilence Drive&trade;</strong><br />\r\nBecause this machine is super quiet, you can take full advantage of off-peak energy costs without being disturbed during the night by noisy dishwashing. A brushless motor provides a quieter, faster and more energy efficient performance</p>\r\n<p><strong>VarioSpeed Plus</strong><br />\r\nThis function cleans dishes up to three times faster, while providing the best possible cleaning and drying results.</p>\r\n<p><strong>AquaMix</strong><br />\r\nThis glass protection system ensures extra gentle handling for your delicate glasses, making sure they come out shiny and clean without getting broken.</p>",
+        "productInformation": "Leoncino is a white lion.",
         "features": [{
                      "groupName": "",
                      "attributes": [{
@@ -151,25 +151,7 @@
                                     "name": "Dimensions",
                                     "toolTip": "",
                                     "uom": "",
-                                    "value": "H81.5 x W59.8 x D55cm"
-                                    }, {
-                                    "id": "attr9834441116",
-                                    "name": "Number of Programs",
-                                    "toolTip": "",
-                                    "uom": "",
-                                    "value": "5"
-                                    }, {
-                                    "id": "attr9834441118",
-                                    "name": "Drying System",
-                                    "toolTip": "",
-                                    "uom": "",
-                                    "value": "Heat Exchanger"
-                                    }, {
-                                    "id": "attr9834441119",
-                                    "name": "Model name / number",
-                                    "toolTip": "",
-                                    "uom": "",
-                                    "value": "SMV53M40GB"
+                                    "value": "H30 x W30 x D30cm"
                                     }, {
                                     "id": "attr9834441120",
                                     "name": "Quick wash",
@@ -182,132 +164,6 @@
                                     "toolTip": "Graded on performance A - G, with A being the highest grade",
                                     "uom": "",
                                     "value": "A"
-                                    }, {
-                                    "id": "attr9834441125",
-                                    "name": "Overflow protection",
-                                    "toolTip": "An anti-flood device prevents the machine from being damaged by flooding from the inlet pipe",
-                                    "uom": "",
-                                    "value": "YES"
-                                    }, {
-                                    "id": "attr9834441126",
-                                    "name": "Brand",
-                                    "toolTip": "",
-                                    "uom": "",
-                                    "value": "Bosch"
-                                    }, {
-                                    "id": "attr9834441127",
-                                    "name": "Dishwasher Size",
-                                    "toolTip": "",
-                                    "uom": "",
-                                    "value": "Full"
-                                    }, {
-                                    "id": "attr9834441128",
-                                    "name": "Energy Rating ",
-                                    "toolTip": "Graded on performance, from A+++ to G, with A+++ being the highest rating. Higher ratings mean better energy efficiency",
-                                    "uom": "",
-                                    "value": "A++"
-                                    }, {
-                                    "id": "attr9834441129",
-                                    "name": "Place Settings",
-                                    "toolTip": "A complete set of items provided for one person at a meal  ",
-                                    "uom": "",
-                                    "value": "13"
-                                    }, {
-                                    "id": "attr9834441131",
-                                    "name": "Delay Start",
-                                    "toolTip": "",
-                                    "uom": "",
-                                    "value": "Yes"
-                                    }, {
-                                    "id": "attr9834441132",
-                                    "name": "Noise Level",
-                                    "toolTip": "How noisy, in decibels, the machine is. The lower the dB, the quieter the appliance",
-                                    "uom": "",
-                                    "value": "46dB"
-                                    }, {
-                                    "id": "attr9834441133",
-                                    "name": "Estimated Annual Energy Consumption",
-                                    "toolTip": "Typical annual amount used by a 4 person household",
-                                    "uom": "",
-                                    "value": "262kWh"
-                                    }, {
-                                    "id": "attr9834441134",
-                                    "name": "Cutlery Basket",
-                                    "toolTip": "",
-                                    "uom": "",
-                                    "value": "YES"
-                                    }, {
-                                    "id": "attr9834441136",
-                                    "name": "Program Sequence Indicator",
-                                    "toolTip": "Tells you the progress of your washing/drying cycle",
-                                    "uom": "",
-                                    "value": "Yes"
-                                    }, {
-                                    "id": "attr9834441138",
-                                    "name": "Next Day Delivery",
-                                    "toolTip": "We offer next working day delivery of appliances in selected areas. See our delivery information page for conditions ",
-                                    "uom": "",
-                                    "value": "YES"
-                                    }, {
-                                    "id": "attr9834441140",
-                                    "name": "Digital display",
-                                    "toolTip": "",
-                                    "uom": "",
-                                    "value": "Yes"
-                                    }, {
-                                    "id": "attr9834441141",
-                                    "name": "Adjustable racking",
-                                    "toolTip": "Lets you move the racking around to fit large or awkward items",
-                                    "uom": "",
-                                    "value": "YES"
-                                    }, {
-                                    "id": "attr9834441142",
-                                    "name": "Delicate Wash",
-                                    "toolTip": "A gentle clean, designed to protect delicate items, such as glasses",
-                                    "uom": "",
-                                    "value": "AquaMix glass protection system"
-                                    }, {
-                                    "id": "attr9834441143",
-                                    "name": "Energy Consumption Per Standard Cycle",
-                                    "toolTip": "Based on the drying cycle of the standard cotton programme at full load. Actual energy consumption per cycle will depend on how the appliance is used.",
-                                    "uom": "",
-                                    "value": "1.02kWh"
-                                    }, {
-                                    "id": "attr9834441145",
-                                    "name": "Time remaining indicator",
-                                    "toolTip": "Tells you how long the programme's got to go",
-                                    "uom": "",
-                                    "value": "Yes"
-                                    }, {
-                                    "id": "attr9834441148",
-                                    "name": "Rinse Aid Indicator",
-                                    "toolTip": "",
-                                    "uom": "",
-                                    "value": "YES"
-                                    }, {
-                                    "id": "attr9834441149",
-                                    "name": "Wash performance",
-                                    "toolTip": "Graded on performance A - G, with A being the highest grade. The higher the grade the more energy efficient the appliance.",
-                                    "uom": "",
-                                    "value": "A"
-                                    }, {
-                                    "id": "attr9834441150",
-                                    "name": "Salt Level Indicator",
-                                    "toolTip": "",
-                                    "uom": "",
-                                    "value": "YES"
-                                    }, {
-                                    "id": "attr9834441151",
-                                    "name": "Type",
-                                    "toolTip": "",
-                                    "uom": "",
-                                    "value": "Integrated"
-                                    }, {
-                                    "id": "attr9834441152",
-                                    "name": "Eligible for International Delivery",
-                                    "toolTip": "",
-                                    "uom": "",
-                                    "value": "No"
                                     }]
                      }],
         "careGuide": [],
