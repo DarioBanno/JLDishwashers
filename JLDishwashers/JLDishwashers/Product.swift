@@ -20,7 +20,6 @@ struct Product: JSONParsable {
     var displaySpecialOffer: String?
     var additionalServices: AdditionalServices?
     var code: String?
-    var features: [Feature]?
     
     init?(json: JSONObject?) {
         productId = json?["productId"] as? String
@@ -31,6 +30,8 @@ struct Product: JSONParsable {
         media = Media(json: json?["media"] as? JSONObject)
         details = Details(json: json?["details"] as? JSONObject)
         displaySpecialOffer = json?["displaySpecialOffer"] as? String
+        additionalServices = AdditionalServices(json: json?["additionalServices"] as? JSONObject)
+        code = json?["code"] as? String
 
         // Validate model
         guard productId != nil else {
@@ -54,22 +55,24 @@ struct Product: JSONParsable {
     
     struct Details: JSONParsable {
         var productInformation: String?
+        var features: [Feature]?
         init?(json: JSONObject?) {
             productInformation = json?["productInformation"] as? String
+            features = [Feature](jsonArray: json?["features"] as? [JSONObject])
         }
     }
     
     struct AdditionalServices: JSONParsable {
         var includedServices: [String]?
         init?(json: JSONObject?) {
-            // TODO
+           includedServices = json?["includedServices"] as? [String]
         }
     }
     
     struct Feature: JSONParsable {
         var attributes: [Attribute]?
         init?(json: JSONObject?) {
-            // TODO
+            attributes = [Attribute](jsonArray: json?["attributes"] as? [JSONObject])
         }
     }
     
@@ -77,7 +80,8 @@ struct Product: JSONParsable {
         var name: String?
         var value: String?
         init?(json: JSONObject?) {
-            // TODO
+            name = json?["name"] as? String
+            value = json?["value"] as? String
         }
     }
 
