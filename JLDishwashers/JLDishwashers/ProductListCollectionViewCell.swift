@@ -24,7 +24,7 @@ class ProductListCollectionViewCell: UICollectionViewCell {
     func configure(from product: Product) {
         titleLabel.text = product.title
         priceLabel.text = "£" + (product.price?.now ?? "")
-        if let productImage = product.image, let url = URL(string: "https:" + productImage) {
+        if let productImage = product.image, let url = URL(httpsString: productImage) {
             imageView.load(from: url)
         }
     }
