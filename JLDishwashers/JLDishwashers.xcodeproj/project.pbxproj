@@ -48,6 +48,8 @@
 		49C192321E54BDAC00F36F05 /* ImageSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192311E54BDAC00F36F05 /* ImageSliderViewController.swift */; };
 		49C192341E54C50900F36F05 /* UIViewController+Embedment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192331E54C50900F36F05 /* UIViewController+Embedment.swift */; };
 		49C192361E54DA0200F36F05 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192351E54DA0200F36F05 /* URLImageView.swift */; };
+		49C192381E54E44E00F36F05 /* URL+HttpString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192371E54E44E00F36F05 /* URL+HttpString.swift */; };
+		49C1923A1E54E50A00F36F05 /* URL+HttpStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192391E54E50A00F36F05 /* URL+HttpStringTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +108,8 @@
 		49C192311E54BDAC00F36F05 /* ImageSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSliderViewController.swift; sourceTree = "<group>"; };
 		49C192331E54C50900F36F05 /* UIViewController+Embedment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embedment.swift"; sourceTree = "<group>"; };
 		49C192351E54DA0200F36F05 /* URLImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
+		49C192371E54E44E00F36F05 /* URL+HttpString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+HttpString.swift"; sourceTree = "<group>"; };
+		49C192391E54E50A00F36F05 /* URL+HttpStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+HttpStringTests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 				4908FD441E53093100CDC700 /* JSONParsableTests.swift */,
 				4908FD471E530AFD00CDC700 /* ProductTests.swift */,
 				4908FD541E5315FD00CDC700 /* PriceTests.swift */,
+				49C192391E54E50A00F36F05 /* URL+HttpStringTests.swift */,
 				4908FD721E5333E600CDC700 /* XCTest+Bundle.swift */,
 				4908FD511E530BB000CDC700 /* Stubs */,
 				4908FD411E53042A00CDC700 /* Mocks */,
@@ -255,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				4908FD681E532C3100CDC700 /* UICollectionView+Reusable.swift */,
+				49C192371E54E44E00F36F05 /* URL+HttpString.swift */,
 				49C192331E54C50900F36F05 /* UIViewController+Embedment.swift */,
 			);
 			name = Extensions;
@@ -391,6 +397,7 @@
 				4908FD431E53091900CDC700 /* JSONParsable.swift in Sources */,
 				4908FD4A1E530B1F00CDC700 /* Product.swift in Sources */,
 				4908FD571E53161200CDC700 /* Price.swift in Sources */,
+				49C192381E54E44E00F36F05 /* URL+HttpString.swift in Sources */,
 				4908FD301E52FD7000CDC700 /* NetworkManager.swift in Sources */,
 				4908FD691E532C3100CDC700 /* UICollectionView+Reusable.swift in Sources */,
 				4908FD121E52FA3800CDC700 /* ProductListViewController.swift in Sources */,
@@ -416,6 +423,7 @@
 				4908FD771E53663F00CDC700 /* HTTPClientTests.swift in Sources */,
 				4908FD451E53093100CDC700 /* JSONParsableTests.swift in Sources */,
 				4908FD551E5315FD00CDC700 /* PriceTests.swift in Sources */,
+				49C1923A1E54E50A00F36F05 /* URL+HttpStringTests.swift in Sources */,
 				4908FD401E53040700CDC700 /* MockURLSession.swift in Sources */,
 				4908FD731E5333E600CDC700 /* XCTest+Bundle.swift in Sources */,
 				4908FD3E1E53037600CDC700 /* ProductListServiceTests.swift in Sources */,
