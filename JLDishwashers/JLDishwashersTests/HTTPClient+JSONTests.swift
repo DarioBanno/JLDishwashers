@@ -189,7 +189,7 @@ class HTTPClient_JSONTests: XCTestCase {
     
     func test_response_with_no_data_returns_error() {
         
-        // GIVEN I have a response with no data
+        // GIVEN I mock a response with no data
         mockURLSession.responseData = nil
         
         // WHEN I send a service request
@@ -211,7 +211,7 @@ class HTTPClient_JSONTests: XCTestCase {
         // AND response JSON should be nil
         XCTAssertNil(responseJSON)
         
-        // AND response error should be no Data
+        // AND response error should be No Data
         guard case .unexpectedResponseNoData = responseError! else {
             XCTFail(#function)
             return
