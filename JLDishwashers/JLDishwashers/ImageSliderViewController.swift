@@ -36,6 +36,7 @@ class ImageSliderViewController: UIViewController {
         // create slides
         for index in 0..<urls.count {
             let imageView = generateImageSlide(at: index)
+            imageView.placeholderImage = #imageLiteral(resourceName: "jlewis-placeholder")
             imageView.load(from: urls[index])
             scrollView.addSubview(imageView)
         }
