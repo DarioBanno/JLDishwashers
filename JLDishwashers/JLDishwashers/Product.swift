@@ -16,6 +16,11 @@ struct Product: JSONParsable {
     var outOfStock: Bool?
     var price: Price?
     var media: Media?
+    var details: Details?
+    var displaySpecialOffer: String?
+    var additionalServices: AdditionalServices?
+    var code: String?
+    var features: [Feature]?
     
     struct Media: JSONParsable {
         var images: Images?
@@ -27,6 +32,32 @@ struct Product: JSONParsable {
         var urls: [String]?
         init?(json: JSONObject?) {
             urls = json?["urls"] as? [String]
+        }
+    }
+    struct Details: JSONParsable {
+        var productInformation: String?
+        var displaySpecialOffer: String?
+        init?(json: JSONObject?) {
+            // TODO
+        }
+    }
+    struct AdditionalServices: JSONParsable {
+        var includedServices: [String]?
+        init?(json: JSONObject?) {
+            // TODO
+        }
+    }
+    struct Feature: JSONParsable {
+        var attributes: [Attribute]?
+        init?(json: JSONObject?) {
+            // TODO
+        }
+    }
+    struct Attribute: JSONParsable {
+        var name: String?
+        var value: String?
+        init?(json: JSONObject?) {
+            // TODO
         }
     }
     
