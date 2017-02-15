@@ -16,6 +16,9 @@ class ImageSliderViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.isPagingEnabled = true
+        scrollView.delegate = self
+        pageControl.pageIndicatorTintColor = .lightGray
+        pageControl.currentPageIndicatorTintColor = .black
     }
     
     func configure(with urls: [URL]) {
@@ -33,7 +36,6 @@ class ImageSliderViewController: UIViewController {
         // create slides
         for index in 0..<urls.count {
             let imageView = generateImageSlide(at: index)
-            imageView.backgroundColor = .red
             imageView.load(from: urls[index])
             scrollView.addSubview(imageView)
         }
@@ -47,3 +49,15 @@ class ImageSliderViewController: UIViewController {
     
 }
 
+extension ImageSliderViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        // update current page in indicator
+        let width = scrollView.bounds.size.width
+        let pageIndex = Int((scrollView.contentOffset.x + width/2) / width)
+        if pageControl.currentPage != pageIndex {
+            pageControl.currentPage = pageIndex
+        }
+    }
+    
+}
