@@ -22,13 +22,11 @@ class URLImageView: UIImageView {
         }
         
         // Load image from URL
-        NetworkManager.shared.httpClient.requestData(method: .get, url: url) { (data: Data?, error: HTTPClientError?) in
-            DispatchQueue.main.async { [weak self] in
-                guard let data = data, let image = UIImage(data: data) else {
-                    return
-                }
-                self?.image = image
+        NetworkManager.shared.httpClient.requestData(method: .get, url: url) { [weak self] (data: Data?, error: HTTPClientError?) in
+            guard let data = data, let image = UIImage(data: data) else {
+                return
             }
+            self?.image = image
         }
     }
     

@@ -44,10 +44,12 @@ class HTTPClientTests: XCTestCase {
         let asyncExpectation = expectation(description: #function)
         var responseData: Data?
         var responseError: HTTPClientError?
+        var isMainThread: Bool?
         
         httpClient.requestData(method: .get, url: url) { (data: Data?, error: HTTPClientError?) in
             responseData = data
             responseError = error
+            isMainThread = Thread.isMainThread
             asyncExpectation.fulfill()
         }
         
@@ -64,6 +66,9 @@ class HTTPClientTests: XCTestCase {
         
         // AND response error should be nil
         XCTAssertNil(responseError)
+        
+        // AND completion should be executed on main thread
+        XCTAssertTrue(isMainThread!)
     }
     
     func test_valid_request_with_empty_data_no_error_response_succeeds() {
@@ -79,10 +84,12 @@ class HTTPClientTests: XCTestCase {
         let asyncExpectation = expectation(description: #function)
         var responseData: Data?
         var responseError: HTTPClientError?
-        
+        var isMainThread: Bool?
+
         httpClient.requestData(method: .get, url: url) { (data: Data?, error: HTTPClientError?) in
             responseData = data
             responseError = error
+            isMainThread = Thread.isMainThread
             asyncExpectation.fulfill()
         }
         
@@ -96,6 +103,9 @@ class HTTPClientTests: XCTestCase {
         
         // AND response error should be nil
         XCTAssertNil(responseError)
+
+        // AND completion should be executed on main thread
+        XCTAssertTrue(isMainThread!)
     }
     
     func test_response_with_error_returns_error() {
@@ -108,10 +118,12 @@ class HTTPClientTests: XCTestCase {
         let asyncExpectation = expectation(description: #function)
         var responseData: Data?
         var responseError: HTTPClientError?
-        
+        var isMainThread: Bool?
+
         httpClient.requestData(method: .post, url: URL(string: "http://apptown.io")!) { (data: Data?, error: HTTPClientError?) in
             responseData = data
             responseError = error
+            isMainThread = Thread.isMainThread
             asyncExpectation.fulfill()
         }
         
@@ -128,6 +140,9 @@ class HTTPClientTests: XCTestCase {
             XCTFail(#function)
             return
         }
+
+        // AND completion should be executed on main thread
+        XCTAssertTrue(isMainThread!)
     }
     
     func test_response_with_no_data_returns_error() {
@@ -139,10 +154,12 @@ class HTTPClientTests: XCTestCase {
         let asyncExpectation = expectation(description: #function)
         var responseData: Data?
         var responseError: HTTPClientError?
-        
+        var isMainThread: Bool?
+
         httpClient.requestData(method: .post, url: URL(string: "http://apptown.io")!) { (data: Data?, error: HTTPClientError?) in
             responseData = data
             responseError = error
+            isMainThread = Thread.isMainThread
             asyncExpectation.fulfill()
         }
         
@@ -159,6 +176,9 @@ class HTTPClientTests: XCTestCase {
             XCTFail(#function)
             return
         }
+
+        // AND completion should be executed on main thread
+        XCTAssertTrue(isMainThread!)
     }
     
 }

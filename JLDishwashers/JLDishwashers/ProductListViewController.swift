@@ -31,15 +31,12 @@ class ProductListViewController: UICollectionViewController {
     }
 
     func loadProductList() {
-        NetworkManager.shared.productListService.search(query: productCategory, pageSize: productPageSize) { (products, error) in
-            DispatchQueue.main.async { [weak self] in
-                guard let products = products, error == nil else {
-                    return
-                }
-                
-                self?.dataSource.products = products
-                self?.collectionView?.reloadData()
+        NetworkManager.shared.productListService.search(query: productCategory, pageSize: productPageSize) { [weak self] (products, error) in
+            guard let products = products, error == nil else {
+                return
             }
+            self?.dataSource.products = products
+            self?.collectionView?.reloadData()
         }
     }
     

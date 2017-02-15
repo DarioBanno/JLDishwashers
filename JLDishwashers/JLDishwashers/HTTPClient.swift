@@ -33,6 +33,10 @@ struct HTTPClient {
     
     func requestData(method: HTTPRequestMethod, url: URL, body: Data? = nil, contentType: String? = nil, completion: @escaping (_ result: Data?, _ error: HTTPClientError?) -> ()) {
 
+        func dispatchCompletion(_ result: Data?, _ error: HTTPClientError?) {
+            DispatchQueue.main.async { completion(result, error) }
+        }
+        
         Logger.print(">>>>>>>>>> REQUEST")
         Logger.print("method: \(method)")
         Logger.print("url: \(url)")
@@ -63,21 +67,21 @@ struct HTTPClient {
             // Check for error
             guard error == nil else {
                 Logger.print("-- Error Response: \(error)")
-                completion(nil, .unexpectedResponse(error: error!))
+                dispatchCompletion(nil, .unexpectedResponse(error: error!))
                 return
             }
             
             // Data is always expected
             guard let data = data else {
                 Logger.print("-- Error: No data.")
-                completion(nil, .unexpectedResponseNoData)
+                dispatchCompletion(nil, .unexpectedResponseNoData)
                 return
             }
             
             // We are cool with data with no content (this is not an error).
             guard data.count > 0 else {
                 Logger.print("-- No content.")
-                completion(nil, nil)
+                dispatchCompletion(nil, nil)
                 return
             }
             
@@ -86,7 +90,7 @@ struct HTTPClient {
                 Logger.print("Content: \(dataString)")
             }
             
-            completion(data, nil)
+            dispatchCompletion(data, nil)
         }.resume()
     }
     

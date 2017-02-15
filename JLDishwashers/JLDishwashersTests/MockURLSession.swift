@@ -22,7 +22,10 @@ class MockURLSession: URLSession {
     var responseError: Error?
     
     override func dataTask(with request: URLRequest, completionHandler: @escaping (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
-        completionHandler(responseData, nil, responseError)
+        // simulate URL Session background call
+        DispatchQueue.global(qos: .background).async { [weak self] in
+            completionHandler(self?.responseData, nil, self?.responseError)
+        }
         return MockURLSessionDataTask()
     }
     
