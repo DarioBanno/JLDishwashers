@@ -37,6 +37,7 @@ class ImageSliderViewController: UIViewController {
         for index in 0..<urls.count {
             let imageView = generateImageSlide(at: index)
             imageView.placeholderImage = #imageLiteral(resourceName: "jlewis-placeholder")
+            imageView.contentMode = .scaleAspectFit
             imageView.load(from: urls[index])
             scrollView.addSubview(imageView)
         }

@@ -5,14 +5,15 @@
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailsViewController" customModule="JLDishwashers" customModuleProvider="target">
             <connections>
-                <outlet property="imageSliderContainer" destination="szy-jy-odT" id="Dwc-wf-4zP"/>
+                <outlet property="imageSliderContainer" destination="xkh-NM-q3B" id="JPN-My-8LP"/>
                 <outlet property="view" destination="iN0-l3-epB" id="wIE-iE-d3M"/>
             </connections>
         </placeholder>
@@ -21,20 +22,37 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="szy-jy-odT">
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <rect key="frame" x="37" y="28" width="300" height="300"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWx-ip-QCb">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="DbJ-IQ-Iqv">
+                            <rect key="frame" x="0.0" y="8" width="375" height="467"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkh-NM-q3B">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
                     <constraints>
-                        <constraint firstAttribute="width" constant="300" id="9y8-8Y-GPP"/>
-                        <constraint firstAttribute="height" constant="300" id="yWD-mJ-1TV"/>
+                        <constraint firstItem="DbJ-IQ-Iqv" firstAttribute="width" secondItem="tWx-ip-QCb" secondAttribute="width" id="0tk-mp-Idc"/>
+                        <constraint firstAttribute="trailing" secondItem="DbJ-IQ-Iqv" secondAttribute="trailing" id="NFy-eT-gni"/>
+                        <constraint firstAttribute="bottom" secondItem="DbJ-IQ-Iqv" secondAttribute="bottom" id="P6I-Om-cbw"/>
+                        <constraint firstItem="DbJ-IQ-Iqv" firstAttribute="leading" secondItem="tWx-ip-QCb" secondAttribute="leading" id="alx-Rm-OMv"/>
+                        <constraint firstItem="DbJ-IQ-Iqv" firstAttribute="top" secondItem="tWx-ip-QCb" secondAttribute="topMargin" id="amn-8e-EzB"/>
                     </constraints>
-                </view>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="szy-jy-odT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="M2O-Et-e75"/>
-                <constraint firstItem="szy-jy-odT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" constant="20" id="RMU-Ku-ifz"/>
+                <constraint firstAttribute="trailing" secondItem="tWx-ip-QCb" secondAttribute="trailing" id="1El-AS-H5t"/>
+                <constraint firstItem="tWx-ip-QCb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="OdY-fq-6zI"/>
+                <constraint firstAttribute="bottom" secondItem="tWx-ip-QCb" secondAttribute="bottom" id="aGE-rn-pYw"/>
+                <constraint firstItem="tWx-ip-QCb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="eVZ-Lr-tjl"/>
+                <constraint firstItem="xkh-NM-q3B" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.7" id="woe-C9-TfI"/>
             </constraints>
+            <point key="canvasLocation" x="35.5" y="54.5"/>
         </view>
     </objects>
 </document>
