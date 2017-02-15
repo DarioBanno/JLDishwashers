@@ -50,6 +50,7 @@
 		49C192361E54DA0200F36F05 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192351E54DA0200F36F05 /* URLImageView.swift */; };
 		49C192381E54E44E00F36F05 /* URL+HttpString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192371E54E44E00F36F05 /* URL+HttpString.swift */; };
 		49C1923A1E54E50A00F36F05 /* URL+HttpStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192391E54E50A00F36F05 /* URL+HttpStringTests.swift */; };
+		49C192401E5504B100F36F05 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C1923F1E5504B100F36F05 /* Resource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		49C192351E54DA0200F36F05 /* URLImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 		49C192371E54E44E00F36F05 /* URL+HttpString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+HttpString.swift"; sourceTree = "<group>"; };
 		49C192391E54E50A00F36F05 /* URL+HttpStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+HttpStringTests.swift"; sourceTree = "<group>"; };
+		49C1923F1E5504B100F36F05 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				4908FD601E53223800CDC700 /* Logger.swift */,
+				49C1923F1E5504B100F36F05 /* Resource.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				4908FD3B1E53033F00CDC700 /* ServiceConfiguration.swift in Sources */,
 				4908FD431E53091900CDC700 /* JSONParsable.swift in Sources */,
 				4908FD4A1E530B1F00CDC700 /* Product.swift in Sources */,
+				49C192401E5504B100F36F05 /* Resource.swift in Sources */,
 				4908FD571E53161200CDC700 /* Price.swift in Sources */,
 				49C192381E54E44E00F36F05 /* URL+HttpString.swift in Sources */,
 				4908FD301E52FD7000CDC700 /* NetworkManager.swift in Sources */,
