@@ -1,5 +1,5 @@
 //
-//  AttributeItemView.swift
+//  KeyValueView.swift
 //  JLDishwashers
 //
 //  Created by Dario Banno on 16/02/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AttributeItemView: UIView {
+class KeyValueView: UIView {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
