@@ -16,8 +16,7 @@
                 <outlet property="additionalServicesLabel" destination="GdG-A7-cVU" id="ca0-Tq-GXK"/>
                 <outlet property="imageSliderContainer" destination="xkh-NM-q3B" id="JPN-My-8LP"/>
                 <outlet property="priceLabel" destination="G9C-ow-Wgh" id="VHh-nW-sRI"/>
-                <outlet property="productCodeLabel" destination="7eR-YO-xJD" id="ULM-MK-Skp"/>
-                <outlet property="productCodeTitleLabel" destination="HJt-TG-5rq" id="ub6-Ns-AdV"/>
+                <outlet property="productCodeLabel" destination="HJt-TG-5rq" id="MSw-th-Ops"/>
                 <outlet property="productInformationLabel" destination="YFo-2l-tXU" id="Z9I-KH-iUp"/>
                 <outlet property="productInformationTitleLabel" destination="QeF-J5-bdQ" id="lH6-ph-PMQ"/>
                 <outlet property="productSpecificationTitleLabel" destination="P8Z-Wl-jwB" id="Yfv-9O-OgZ"/>
@@ -112,19 +111,11 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eR-YO-xJD">
-                                            <rect key="frame" x="125.5" y="15" width="42" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
                                         <constraint firstItem="HJt-TG-5rq" firstAttribute="leading" secondItem="cas-Ut-fLX" secondAttribute="leadingMargin" constant="8" id="01U-rs-Qq2"/>
-                                        <constraint firstItem="7eR-YO-xJD" firstAttribute="centerY" secondItem="HJt-TG-5rq" secondAttribute="centerY" id="AqV-ON-GeF"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="HJt-TG-5rq" secondAttribute="bottom" id="QIJ-6j-92P"/>
-                                        <constraint firstItem="7eR-YO-xJD" firstAttribute="leading" secondItem="HJt-TG-5rq" secondAttribute="trailing" constant="8" id="Yut-rh-vZZ"/>
                                         <constraint firstItem="HJt-TG-5rq" firstAttribute="top" secondItem="cas-Ut-fLX" secondAttribute="topMargin" id="t6z-GG-02O"/>
                                     </constraints>
                                 </view>

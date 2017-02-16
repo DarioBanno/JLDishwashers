@@ -18,7 +18,6 @@ class ProductPageViewController: UIViewController {
     @IBOutlet weak var productInformationTitleLabel: UILabel!
     @IBOutlet weak var productInformationLabel: UILabel!
     
-    @IBOutlet weak var productCodeTitleLabel: UILabel!
     @IBOutlet weak var productCodeLabel: UILabel!
     
     @IBOutlet weak var productSpecificationTitleLabel: UILabel!
@@ -36,14 +35,14 @@ class ProductPageViewController: UIViewController {
         imageSliderViewController = ImageSliderViewController()
         imageSliderViewController.view.embed(in: imageSliderContainer)
         
-        priceLabel.font = Resource.Font.bigBold
         priceLabel.text = ""
+        priceLabel.font = Resource.Font.bigBold
 
-        specialOfferLabel.textColor = Resource.Color.importantContent
         specialOfferLabel.text = ""
+        specialOfferLabel.textColor = Resource.Color.importantContent
 
-        additionalServicesLabel.textColor = Resource.Color.highlighted
         additionalServicesLabel.text = ""
+        additionalServicesLabel.textColor = Resource.Color.highlighted
 
         productInformationTitleLabel.text = "Product information"
         productInformationTitleLabel.font = Resource.Font.mediumBold
@@ -51,9 +50,7 @@ class ProductPageViewController: UIViewController {
         productInformationLabel.text = ""
         productInformationLabel.lineBreakMode = .byWordWrapping
         
-        productCodeTitleLabel.text = "Product code:"
-        productCodeTitleLabel.font = Resource.Font.mediumRegular
-        
+        productCodeLabel.text = ""
         productCodeLabel.font = Resource.Font.mediumRegular
         
         productSpecificationTitleLabel.text = "Product specification"
@@ -107,7 +104,9 @@ class ProductPageViewController: UIViewController {
         }
         
         // Product code
-        productCodeLabel.text = product.code
+        if let productCode = product.code {
+            productCodeLabel.text = "Product code: \(productCode)"
+        }
     }
     
 }
