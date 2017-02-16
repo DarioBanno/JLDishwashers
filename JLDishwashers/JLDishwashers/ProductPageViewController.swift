@@ -1,5 +1,5 @@
 //
-//  ProductDetailsViewController.swift
+//  ProductPageViewController.swift
 //  JLDishwashers
 //
 //  Created by Dario Banno on 15/02/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProductDetailsViewController: UIViewController {
+class ProductPageViewController: UIViewController {
     
     @IBOutlet weak var imageSliderContainer: UIView!
     @IBOutlet weak var priceDetailsContainer: UIView!

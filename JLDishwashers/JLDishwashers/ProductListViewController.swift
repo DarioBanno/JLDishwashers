@@ -14,7 +14,6 @@ class ProductListViewController: UICollectionViewController {
     var productPageSize = 20
 
     let dataSource = ProductListCollectionViewDataSource()
-    var productDetailsViewController: ProductDetailsViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +40,8 @@ class ProductListViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let productDetailsViewController = ProductDetailsViewController()
-        productDetailsViewController.product = dataSource.products[indexPath.row]
-        show(productDetailsViewController, sender: self)
+        let productPageViewController = ProductPageViewController()
+        productPageViewController.product = dataSource.products[indexPath.row]
+        show(productPageViewController, sender: self)
     }
 }
