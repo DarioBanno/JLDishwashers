@@ -15,6 +15,9 @@ class ProductPageViewController: UIViewController {
     @IBOutlet weak var specialOfferLabel: UILabel!
     @IBOutlet weak var additionalServicesLabel: UILabel!
     
+    @IBOutlet weak var productInformationTitleLabel: UILabel!
+    @IBOutlet weak var productInformationTextLabel: UILabel!
+    
     var product: Product!
     var imageSliderViewController: ImageSliderViewController!
     
@@ -35,6 +38,10 @@ class ProductPageViewController: UIViewController {
         specialOfferLabel.text = ""
         additionalServicesLabel.text = ""
 
+        productInformationTitleLabel.text = "Product information"
+        productInformationTextLabel.text = ""
+        productInformationTextLabel.lineBreakMode = .byWordWrapping
+        
         configure(with: product)
         loadProductDetails()
     }
@@ -71,6 +78,12 @@ class ProductPageViewController: UIViewController {
                 servicesString += service + "\n"
             }
             additionalServicesLabel.text = servicesString
+        }
+        
+        // Populate Product information
+        if let productInformation = product.details?.productInformation,
+            let htmlAttributedString = NSAttributedString(html: productInformation, usingFont: Resource.Font.mediumRegular) {
+            productInformationTextLabel.attributedText = htmlAttributedString
         }
     }
     

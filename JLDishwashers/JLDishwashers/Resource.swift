@@ -16,6 +16,7 @@ struct Resource {
     }
     
     struct Font {
+        static let mediumRegular = UIFont.systemFont(ofSize: 20)
         static let mediumBold = UIFont.boldSystemFont(ofSize: 20)
         static let bigBold = UIFont.boldSystemFont(ofSize: 30)
     }
