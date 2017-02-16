@@ -14,6 +14,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductDetailsViewController" customModule="JLDishwashers" customModuleProvider="target">
             <connections>
                 <outlet property="imageSliderContainer" destination="xkh-NM-q3B" id="JPN-My-8LP"/>
+                <outlet property="priceDetailsContainer" destination="FfI-Cr-GMn" id="Zn3-Qs-soA"/>
                 <outlet property="view" destination="iN0-l3-epB" id="wIE-iE-d3M"/>
             </connections>
         </placeholder>
@@ -26,10 +27,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="DbJ-IQ-Iqv">
-                            <rect key="frame" x="0.0" y="8" width="375" height="467"/>
+                            <rect key="frame" x="0.0" y="8" width="375" height="595"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkh-NM-q3B">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="467"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FfI-Cr-GMn">
+                                    <rect key="frame" x="0.0" y="467" width="375" height="128"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
                             </subviews>

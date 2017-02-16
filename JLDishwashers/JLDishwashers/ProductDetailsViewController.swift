@@ -11,6 +11,8 @@ import UIKit
 class ProductDetailsViewController: UIViewController {
     
     @IBOutlet weak var imageSliderContainer: UIView!
+    @IBOutlet weak var priceDetailsContainer: UIView!
+    weak var priceDetailsView: PriceDetailsView!
     
     var product: Product!
     var imageSliderViewController: ImageSliderViewController!
@@ -18,24 +20,41 @@ class ProductDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = product.title
         edgesForExtendedLayout = []
         
         imageSliderViewController = ImageSliderViewController()
-        imageSliderViewController.embed(in: imageSliderContainer)
+        imageSliderViewController.view.embed(in: imageSliderContainer)
         
+        let priceDetailsView = PriceDetailsView.loadFromNib() as! PriceDetailsView
+        priceDetailsView.embed(in: priceDetailsContainer)
+        self.priceDetailsView = priceDetailsView
+        
+        configure(with: product)
         loadProductDetails()
     }
     
     func loadProductDetails() {
-        NetworkManager.shared.productListService.fetch(byId: product.productId!) { (product: Product?, error: HTTPClientError?) in
-            DispatchQueue.main.async { [weak self] in
-                guard let urlStrings = product?.media?.images?.urls, error == nil else {
-                    return
-                }
-                self?.imageSliderViewController.configure(with: urlStrings.flatMap({ URL(httpsString: $0) }))
+        NetworkManager.shared.productListService.fetch(byId: product.productId!) { [weak self] (product: Product?, error: HTTPClientError?) in
+            guard let product = product, error == nil else {
+                // TODO: error case
+                return
             }
+            self?.configure(with: product)
         }
+    }
+    
+    func configure(with product: Product) {
+        self.product = product
+
+        title = product.title
+
+        // Populate image slider
+        if let urlStrings = product.media?.images?.urls {
+            imageSliderViewController.configure(with: urlStrings.flatMap({ URL(httpsString: $0) }))
+        }
+        
+        // Populate price details
+        priceDetailsView.configure(with: product)
     }
     
 }
