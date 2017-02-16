@@ -16,6 +16,14 @@ class KeyValueView: UIView {
     override func awakeFromNib() {
         nameLabel.font = Resource.Font.mediumRegular
         valueLabel.font = Resource.Font.mediumRegular
+        
+        nameLabel.text = ""
+        valueLabel.text = ""
+    }
+    
+    func configure(name: String, value: String) {
+        nameLabel.text = name
+        valueLabel.text = value
     }
     
 }
