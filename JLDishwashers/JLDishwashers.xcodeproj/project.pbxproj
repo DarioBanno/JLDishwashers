@@ -41,12 +41,13 @@
 		4908FD731E5333E600CDC700 /* XCTest+Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD721E5333E600CDC700 /* XCTest+Bundle.swift */; };
 		4908FD751E5364F500CDC700 /* HTTPClient+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD741E5364F500CDC700 /* HTTPClient+JSON.swift */; };
 		4908FD771E53663F00CDC700 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD761E53663F00CDC700 /* HTTPClientTests.swift */; };
+		491CFC131E55218C00A61DBF /* UIView+Embedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CFC121E55218C00A61DBF /* UIView+Embedding.swift */; };
+		491CFC351E56050700A61DBF /* UIView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CFC341E56050700A61DBF /* UIView+NibLoading.swift */; };
 		49C192031E5475F300F36F05 /* ProductList_fetch_productId.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C192021E5475F300F36F05 /* ProductList_fetch_productId.json */; };
 		49C192091E54A5D300F36F05 /* ProductDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192081E54A5D300F36F05 /* ProductDetailsViewController.swift */; };
 		49C1920B1E54A5F900F36F05 /* ProductDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C1920A1E54A5F900F36F05 /* ProductDetailsViewController.xib */; };
 		49C192301E54BC4B00F36F05 /* ImageSliderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C1922F1E54BC4B00F36F05 /* ImageSliderViewController.xib */; };
 		49C192321E54BDAC00F36F05 /* ImageSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192311E54BDAC00F36F05 /* ImageSliderViewController.swift */; };
-		49C192341E54C50900F36F05 /* UIViewController+Embedment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192331E54C50900F36F05 /* UIViewController+Embedment.swift */; };
 		49C192361E54DA0200F36F05 /* URLImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192351E54DA0200F36F05 /* URLImageView.swift */; };
 		49C192381E54E44E00F36F05 /* URL+HttpString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192371E54E44E00F36F05 /* URL+HttpString.swift */; };
 		49C1923A1E54E50A00F36F05 /* URL+HttpStringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192391E54E50A00F36F05 /* URL+HttpStringTests.swift */; };
@@ -102,12 +103,13 @@
 		4908FD721E5333E600CDC700 /* XCTest+Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTest+Bundle.swift"; sourceTree = "<group>"; };
 		4908FD741E5364F500CDC700 /* HTTPClient+JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "HTTPClient+JSON.swift"; sourceTree = "<group>"; };
 		4908FD761E53663F00CDC700 /* HTTPClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
+		491CFC121E55218C00A61DBF /* UIView+Embedding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Embedding.swift"; sourceTree = "<group>"; };
+		491CFC341E56050700A61DBF /* UIView+NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading.swift"; sourceTree = "<group>"; };
 		49C192021E5475F300F36F05 /* ProductList_fetch_productId.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProductList_fetch_productId.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		49C192081E54A5D300F36F05 /* ProductDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductDetailsViewController.swift; sourceTree = "<group>"; };
 		49C1920A1E54A5F900F36F05 /* ProductDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductDetailsViewController.xib; sourceTree = "<group>"; };
 		49C1922F1E54BC4B00F36F05 /* ImageSliderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageSliderViewController.xib; sourceTree = "<group>"; };
 		49C192311E54BDAC00F36F05 /* ImageSliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSliderViewController.swift; sourceTree = "<group>"; };
-		49C192331E54C50900F36F05 /* UIViewController+Embedment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Embedment.swift"; sourceTree = "<group>"; };
 		49C192351E54DA0200F36F05 /* URLImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLImageView.swift; sourceTree = "<group>"; };
 		49C192371E54E44E00F36F05 /* URL+HttpString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+HttpString.swift"; sourceTree = "<group>"; };
 		49C192391E54E50A00F36F05 /* URL+HttpStringTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+HttpStringTests.swift"; sourceTree = "<group>"; };
@@ -264,7 +266,8 @@
 			children = (
 				4908FD681E532C3100CDC700 /* UICollectionView+Reusable.swift */,
 				49C192371E54E44E00F36F05 /* URL+HttpString.swift */,
-				49C192331E54C50900F36F05 /* UIViewController+Embedment.swift */,
+				491CFC121E55218C00A61DBF /* UIView+Embedding.swift */,
+				491CFC341E56050700A61DBF /* UIView+NibLoading.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -406,9 +409,10 @@
 				4908FD691E532C3100CDC700 /* UICollectionView+Reusable.swift in Sources */,
 				4908FD121E52FA3800CDC700 /* ProductListViewController.swift in Sources */,
 				4908FD371E53031300CDC700 /* Service.swift in Sources */,
+				491CFC131E55218C00A61DBF /* UIView+Embedding.swift in Sources */,
 				4908FD611E53223800CDC700 /* Logger.swift in Sources */,
+				491CFC351E56050700A61DBF /* UIView+NibLoading.swift in Sources */,
 				4908FD391E53032600CDC700 /* ProductListService.swift in Sources */,
-				49C192341E54C50900F36F05 /* UIViewController+Embedment.swift in Sources */,
 				4908FD331E52FD8C00CDC700 /* HTTPClient.swift in Sources */,
 				4908FD661E532AC600CDC700 /* ProductListCollectionViewCell.swift in Sources */,
 				4908FD751E5364F500CDC700 /* HTTPClient+JSON.swift in Sources */,

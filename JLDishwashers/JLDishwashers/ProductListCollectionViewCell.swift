@@ -18,7 +18,7 @@ class ProductListCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         imageView.contentMode = .scaleAspectFit
         imageView.placeholderImage = #imageLiteral(resourceName: "jlewis-placeholder")
-        priceLabel.font = Resource.Font.importantMedium
+        priceLabel.font = Resource.Font.mediumBold
     }
     
     func configure(from product: Product) {
