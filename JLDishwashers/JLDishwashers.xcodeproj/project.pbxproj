@@ -43,6 +43,8 @@
 		4908FD771E53663F00CDC700 /* HTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4908FD761E53663F00CDC700 /* HTTPClientTests.swift */; };
 		491CFC131E55218C00A61DBF /* UIView+Embedding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CFC121E55218C00A61DBF /* UIView+Embedding.swift */; };
 		491CFC351E56050700A61DBF /* UIView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CFC341E56050700A61DBF /* UIView+NibLoading.swift */; };
+		491CFC371E561CD100A61DBF /* NSAttributedString+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CFC361E561CD100A61DBF /* NSAttributedString+HTML.swift */; };
+		491CFC3C1E561FB900A61DBF /* NSAttributedString+HTMLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CFC3B1E561FB900A61DBF /* NSAttributedString+HTMLTests.swift */; };
 		49C192031E5475F300F36F05 /* ProductList_fetch_productId.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C192021E5475F300F36F05 /* ProductList_fetch_productId.json */; };
 		49C192091E54A5D300F36F05 /* ProductPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192081E54A5D300F36F05 /* ProductPageViewController.swift */; };
 		49C1920B1E54A5F900F36F05 /* ProductPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C1920A1E54A5F900F36F05 /* ProductPageViewController.xib */; };
@@ -107,6 +109,8 @@
 		4908FD761E53663F00CDC700 /* HTTPClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientTests.swift; sourceTree = "<group>"; };
 		491CFC121E55218C00A61DBF /* UIView+Embedding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Embedding.swift"; sourceTree = "<group>"; };
 		491CFC341E56050700A61DBF /* UIView+NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading.swift"; sourceTree = "<group>"; };
+		491CFC361E561CD100A61DBF /* NSAttributedString+HTML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+HTML.swift"; sourceTree = "<group>"; };
+		491CFC3B1E561FB900A61DBF /* NSAttributedString+HTMLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+HTMLTests.swift"; sourceTree = "<group>"; };
 		49C192021E5475F300F36F05 /* ProductList_fetch_productId.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProductList_fetch_productId.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		49C192081E54A5D300F36F05 /* ProductPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductPageViewController.swift; sourceTree = "<group>"; };
 		49C1920A1E54A5F900F36F05 /* ProductPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductPageViewController.xib; sourceTree = "<group>"; };
@@ -185,7 +189,8 @@
 				4908FD471E530AFD00CDC700 /* ProductTests.swift */,
 				4908FD541E5315FD00CDC700 /* PriceTests.swift */,
 				49C192391E54E50A00F36F05 /* URL+HttpStringTests.swift */,
-				4908FD721E5333E600CDC700 /* XCTest+Bundle.swift */,
+				491CFC3B1E561FB900A61DBF /* NSAttributedString+HTMLTests.swift */,
+				491CFC381E561F9000A61DBF /* Extensions */,
 				4908FD511E530BB000CDC700 /* Stubs */,
 				4908FD411E53042A00CDC700 /* Mocks */,
 				4908FD261E52FA3800CDC700 /* Info.plist */,
@@ -274,6 +279,15 @@
 				49C192371E54E44E00F36F05 /* URL+HttpString.swift */,
 				491CFC121E55218C00A61DBF /* UIView+Embedding.swift */,
 				491CFC341E56050700A61DBF /* UIView+NibLoading.swift */,
+				491CFC361E561CD100A61DBF /* NSAttributedString+HTML.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		491CFC381E561F9000A61DBF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4908FD721E5333E600CDC700 /* XCTest+Bundle.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -414,6 +428,7 @@
 				49C192381E54E44E00F36F05 /* URL+HttpString.swift in Sources */,
 				4908FD301E52FD7000CDC700 /* NetworkManager.swift in Sources */,
 				4908FD691E532C3100CDC700 /* UICollectionView+Reusable.swift in Sources */,
+				491CFC371E561CD100A61DBF /* NSAttributedString+HTML.swift in Sources */,
 				4908FD121E52FA3800CDC700 /* ProductListViewController.swift in Sources */,
 				4908FD371E53031300CDC700 /* Service.swift in Sources */,
 				491CFC131E55218C00A61DBF /* UIView+Embedding.swift in Sources */,
@@ -440,6 +455,7 @@
 				4908FD451E53093100CDC700 /* JSONParsableTests.swift in Sources */,
 				4908FD551E5315FD00CDC700 /* PriceTests.swift in Sources */,
 				49C1923A1E54E50A00F36F05 /* URL+HttpStringTests.swift in Sources */,
+				491CFC3C1E561FB900A61DBF /* NSAttributedString+HTMLTests.swift in Sources */,
 				4908FD401E53040700CDC700 /* MockURLSession.swift in Sources */,
 				4908FD731E5333E600CDC700 /* XCTest+Bundle.swift in Sources */,
 				4908FD3E1E53037600CDC700 /* ProductListServiceTests.swift in Sources */,
