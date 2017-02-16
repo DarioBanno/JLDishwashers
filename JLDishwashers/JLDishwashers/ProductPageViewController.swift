@@ -16,7 +16,12 @@ class ProductPageViewController: UIViewController {
     @IBOutlet weak var additionalServicesLabel: UILabel!
     
     @IBOutlet weak var productInformationTitleLabel: UILabel!
-    @IBOutlet weak var productInformationTextLabel: UILabel!
+    @IBOutlet weak var productInformationLabel: UILabel!
+    
+    @IBOutlet weak var productCodeTitleLabel: UILabel!
+    @IBOutlet weak var productCodeLabel: UILabel!
+    
+    @IBOutlet weak var productSpecificationTitleLabel: UILabel!
     
     var product: Product!
     var imageSliderViewController: ImageSliderViewController!
@@ -24,25 +29,40 @@ class ProductPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        // Layout
         edgesForExtendedLayout = []
         
         imageSliderViewController = ImageSliderViewController()
         imageSliderViewController.view.embed(in: imageSliderContainer)
         
-        
         priceLabel.font = Resource.Font.bigBold
-        specialOfferLabel.textColor = Resource.Color.importantContent
-        additionalServicesLabel.textColor = Resource.Color.highlighted
-        
         priceLabel.text = ""
+
+        specialOfferLabel.textColor = Resource.Color.importantContent
         specialOfferLabel.text = ""
+
+        additionalServicesLabel.textColor = Resource.Color.highlighted
         additionalServicesLabel.text = ""
 
         productInformationTitleLabel.text = "Product information"
-        productInformationTextLabel.text = ""
-        productInformationTextLabel.lineBreakMode = .byWordWrapping
+        productInformationTitleLabel.font = Resource.Font.mediumBold
         
+        productInformationLabel.text = ""
+        productInformationLabel.lineBreakMode = .byWordWrapping
+        
+        productCodeTitleLabel.text = "Product code:"
+        productCodeTitleLabel.font = Resource.Font.mediumRegular
+        
+        productCodeLabel.font = Resource.Font.mediumRegular
+        
+        productSpecificationTitleLabel.text = "Product specification"
+        productSpecificationTitleLabel.font = Resource.Font.mediumRegular
+        
+        // Configure with initial data from product
         configure(with: product)
+        
+        // Load more details for product
         loadProductDetails()
     }
     
@@ -67,7 +87,7 @@ class ProductPageViewController: UIViewController {
         }
         
         // Populate price details
-        priceLabel.text = "£" + (product.price?.now ?? "--")
+        priceLabel.text = "£\(product.price?.now ?? "--")"
         specialOfferLabel.text = product.displaySpecialOffer
         
         // Add additional services separated by newline
@@ -80,11 +100,14 @@ class ProductPageViewController: UIViewController {
             additionalServicesLabel.text = servicesString
         }
         
-        // Populate Product information
+        // Product information
         if let productInformation = product.details?.productInformation,
             let htmlAttributedString = NSAttributedString(html: productInformation, usingFont: Resource.Font.mediumRegular) {
-            productInformationTextLabel.attributedText = htmlAttributedString
+            productInformationLabel.attributedText = htmlAttributedString
         }
+        
+        // Product code
+        productCodeLabel.text = product.code
     }
     
 }
