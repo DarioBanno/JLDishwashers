@@ -11,8 +11,9 @@ import UIKit
 class ProductPageViewController: UIViewController {
     
     @IBOutlet weak var imageSliderContainer: UIView!
-    @IBOutlet weak var priceDetailsContainer: UIView!
-    weak var priceDetailsView: PriceDetailsView!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var specialOfferLabel: UILabel!
+    @IBOutlet weak var additionalServicesLabel: UILabel!
     
     var product: Product!
     var imageSliderViewController: ImageSliderViewController!
@@ -25,10 +26,15 @@ class ProductPageViewController: UIViewController {
         imageSliderViewController = ImageSliderViewController()
         imageSliderViewController.view.embed(in: imageSliderContainer)
         
-        let priceDetailsView = PriceDetailsView.loadFromNib() as! PriceDetailsView
-        priceDetailsView.embed(in: priceDetailsContainer)
-        self.priceDetailsView = priceDetailsView
         
+        priceLabel.font = Resource.Font.bigBold
+        specialOfferLabel.textColor = Resource.Color.importantContent
+        additionalServicesLabel.textColor = Resource.Color.highlighted
+        
+        priceLabel.text = ""
+        specialOfferLabel.text = ""
+        additionalServicesLabel.text = ""
+
         configure(with: product)
         loadProductDetails()
     }
@@ -54,7 +60,18 @@ class ProductPageViewController: UIViewController {
         }
         
         // Populate price details
-        priceDetailsView.configure(with: product)
+        priceLabel.text = "£" + (product.price?.now ?? "--")
+        specialOfferLabel.text = product.displaySpecialOffer
+        
+        // Add additional services separated by newline
+        additionalServicesLabel.text = ""
+        if let includedServices = product.additionalServices?.includedServices {
+            var servicesString = ""
+            for service in includedServices {
+                servicesString += service + "\n"
+            }
+            additionalServicesLabel.text = servicesString
+        }
     }
     
 }
