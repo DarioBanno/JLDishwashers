@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="KeyValueView" customModule="JLDishwashers" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="283" height="28"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CB8-rz-dKh">
+                    <rect key="frame" x="0.0" y="0.0" width="170" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohu-z7-hLT">
+                    <rect key="frame" x="175" y="0.0" width="108" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CB8-rz-dKh" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.6" id="5Ka-Ip-2PX"/>
+                <constraint firstItem="CB8-rz-dKh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="7od-gj-UPf"/>
+                <constraint firstAttribute="trailing" secondItem="Ohu-z7-hLT" secondAttribute="trailing" id="BAq-Gh-w9V"/>
+                <constraint firstItem="Ohu-z7-hLT" firstAttribute="leading" secondItem="CB8-rz-dKh" secondAttribute="trailing" constant="5" id="HT1-sR-7Dq"/>
+                <constraint firstAttribute="bottom" secondItem="Ohu-z7-hLT" secondAttribute="bottom" id="iW1-yn-CDq"/>
+                <constraint firstAttribute="bottom" secondItem="CB8-rz-dKh" secondAttribute="bottom" id="lgv-rW-y2P"/>
+                <constraint firstItem="Ohu-z7-hLT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="oPp-pC-mb2"/>
+                <constraint firstItem="CB8-rz-dKh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="p4Q-Ux-dtJ"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="nameLabel" destination="CB8-rz-dKh" id="odS-j9-qsx"/>
+                <outlet property="valueLabel" destination="Ohu-z7-hLT" id="DyR-1O-Jg1"/>
+            </connections>
+            <point key="canvasLocation" x="-12.5" y="233"/>
+        </view>
+    </objects>
+</document>
