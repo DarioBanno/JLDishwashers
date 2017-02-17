@@ -21,7 +21,10 @@ class ProductListCollectionViewCell: UICollectionViewCell {
         imageView.placeholderImage = #imageLiteral(resourceName: "jlewis-placeholder")
 
         priceLabel.font = Resource.Font.contentTextBold
+        priceLabel.textColor = Resource.Color.darkText
+
         titleLabel.font = Resource.Font.contentText
+        titleLabel.textColor = Resource.Color.darkText
     }
     
     func configure(from product: Product) {
