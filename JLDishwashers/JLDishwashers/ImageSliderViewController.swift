@@ -15,10 +15,13 @@ class ImageSliderViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         scrollView.isPagingEnabled = true
         scrollView.delegate = self
-        pageControl.pageIndicatorTintColor = .lightGray
-        pageControl.currentPageIndicatorTintColor = .black
+        
+        pageControl.pageIndicatorTintColor = Resource.Color.contentText
+        pageControl.currentPageIndicatorTintColor = Resource.Color.darkText
+        pageControl.numberOfPages = 0
     }
     
     func configure(with urls: [URL]) {
