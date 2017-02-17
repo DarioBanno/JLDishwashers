@@ -15,13 +15,17 @@ class PriceDetailsView: UIView {
     @IBOutlet weak var additionalServicesLabel: UILabel!
     
     override func awakeFromNib() {
-        priceLabel.font = Resource.Font.heading1
-        specialOfferLabel.textColor = Resource.Color.specialOffer
-        additionalServicesLabel.textColor = Resource.Color.warrantyInfo
-        
         priceLabel.text = ""
+        priceLabel.font = Resource.Font.heading1
+        priceLabel.textColor = Resource.Color.darkText
+        
         specialOfferLabel.text = ""
+        specialOfferLabel.font = Resource.Font.contentText
+        specialOfferLabel.textColor = Resource.Color.specialOffer
+        
         additionalServicesLabel.text = ""
+        additionalServicesLabel.font = Resource.Font.contentText
+        additionalServicesLabel.textColor = Resource.Color.warrantyInfo
     }
     
     func configure(with product: Product) {
