@@ -23,8 +23,12 @@ class ProductPageViewController: UIViewController {
     @IBOutlet weak var productSpecificationTitleLabel: UILabel!
     @IBOutlet weak var productSpecificationStackView: UIStackView!
     
+    @IBOutlet weak var rightScrollViewWidthConstraint: NSLayoutConstraint!
+    
     var product: Product!
     var imageSliderViewController: ImageSliderViewController!
+    
+    let defaultRightScrollViewWidth: CGFloat = 200
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +76,22 @@ class ProductPageViewController: UIViewController {
         
         // Load more details for product
         loadProductDetails()
+        
+        // Apply layout for columns depending on orientation
+        layoutColumns()
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        layoutColumns()
+    }
+    
+    func layoutColumns() {
+        if UIDevice.current.orientation.isLandscape {
+            rightScrollViewWidthConstraint.constant = defaultRightScrollViewWidth
+        } else {
+            rightScrollViewWidthConstraint.constant = 0
+        }
     }
     
     func loadProductDetails() {
