@@ -21,6 +21,7 @@
                 <outlet property="productInformationTitleLabel" destination="QeF-J5-bdQ" id="lH6-ph-PMQ"/>
                 <outlet property="productSpecificationStackView" destination="ZIr-7S-p73" id="dGj-GI-ESg"/>
                 <outlet property="productSpecificationTitleLabel" destination="P8Z-Wl-jwB" id="Yfv-9O-OgZ"/>
+                <outlet property="rightPriceDetailsContainer" destination="ATN-X9-Pvm" id="zjP-5l-OIh"/>
                 <outlet property="rightScrollViewWidthConstraint" destination="hi7-w4-fk6" id="Eng-vI-3GE"/>
                 <outlet property="specialOfferLabel" destination="nlT-2b-gq3" id="KxZ-ke-dXQ"/>
                 <outlet property="view" destination="iN0-l3-epB" id="wIE-iE-d3M"/>
@@ -152,8 +153,27 @@
                 </scrollView>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWj-Hs-qyt" userLabel="Right Scroll View">
                     <rect key="frame" x="412" y="0.0" width="200" height="1046"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OYv-g3-LOd">
+                            <rect key="frame" x="0.0" y="16" width="200" height="128"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATN-X9-Pvm">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="128"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="128" id="UEm-iq-OH4"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
                     <constraints>
+                        <constraint firstItem="OYv-g3-LOd" firstAttribute="leading" secondItem="eWj-Hs-qyt" secondAttribute="leading" id="I77-EN-vaP"/>
+                        <constraint firstAttribute="bottom" secondItem="OYv-g3-LOd" secondAttribute="bottom" constant="898" id="aWM-8x-xmW"/>
                         <constraint firstAttribute="width" constant="200" id="hi7-w4-fk6"/>
+                        <constraint firstAttribute="trailing" secondItem="OYv-g3-LOd" secondAttribute="trailing" constant="-40" id="tRT-ZG-82G"/>
+                        <constraint firstItem="OYv-g3-LOd" firstAttribute="width" secondItem="eWj-Hs-qyt" secondAttribute="width" id="uCQ-9t-lnC"/>
+                        <constraint firstItem="OYv-g3-LOd" firstAttribute="top" secondItem="eWj-Hs-qyt" secondAttribute="topMargin" constant="8" id="zft-2Y-i2y"/>
                     </constraints>
                 </scrollView>
             </subviews>

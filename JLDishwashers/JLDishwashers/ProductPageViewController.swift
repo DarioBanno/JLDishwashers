@@ -10,7 +10,9 @@ import UIKit
 
 class ProductPageViewController: UIViewController {
     
+    // Left column
     @IBOutlet weak var imageSliderContainer: UIView!
+    
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var specialOfferLabel: UILabel!
     @IBOutlet weak var additionalServicesLabel: UILabel!
@@ -22,17 +24,24 @@ class ProductPageViewController: UIViewController {
     
     @IBOutlet weak var productSpecificationTitleLabel: UILabel!
     @IBOutlet weak var productSpecificationStackView: UIStackView!
-    
+
+    // Right column
     @IBOutlet weak var rightScrollViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var rightPriceDetailsContainer: UIView!
+    weak var rightPriceDetailsView: PriceDetailsView!
+    let defaultRightScrollViewWidth: CGFloat = 200
+
     
     var product: Product!
     var imageSliderViewController: ImageSliderViewController!
     
-    let defaultRightScrollViewWidth: CGFloat = 200
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let rightPriceDetailsView = PriceDetailsView.loadFromNib() as! PriceDetailsView
+        rightPriceDetailsView.embed(in: rightPriceDetailsContainer)
+        self.rightPriceDetailsView = rightPriceDetailsView
         
         // Layout
         edgesForExtendedLayout = []
@@ -117,6 +126,7 @@ class ProductPageViewController: UIViewController {
         // Populate price details
         priceLabel.text = "£\(product.price?.now ?? "--")"
         specialOfferLabel.text = product.displaySpecialOffer
+        rightPriceDetailsView.configure(with: product)
         
         // Add additional services separated by newline
         additionalServicesLabel.text = ""
