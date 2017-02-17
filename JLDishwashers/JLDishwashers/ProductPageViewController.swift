@@ -35,6 +35,7 @@ class ProductPageViewController: UIViewController {
         
         imageSliderViewController = ImageSliderViewController()
         imageSliderViewController.view.embed(in: imageSliderContainer)
+        addChildViewController(imageSliderViewController)
         
         priceLabel.text = ""
         priceLabel.font = Resource.Font.heading1
@@ -149,5 +150,5 @@ class ProductPageViewController: UIViewController {
         keyValueView.configure(name: name, value: value)
         return keyValueView
     }
-    
+ 
 }
