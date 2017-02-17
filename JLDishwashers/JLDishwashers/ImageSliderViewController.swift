@@ -21,7 +21,9 @@ class ImageSliderViewController: UIViewController {
         
         pageControl.pageIndicatorTintColor = Resource.Color.contentText
         pageControl.currentPageIndicatorTintColor = Resource.Color.darkText
-        pageControl.numberOfPages = 0
+        pageControl.numberOfPages = 1
+        pageControl.hidesForSinglePage = false
+        pageControl.isUserInteractionEnabled = false
     }
     
     func configure(with urls: [URL]) {
