@@ -12,7 +12,8 @@ class ProductPageViewController: UIViewController {
     
     // Left column
     @IBOutlet weak var imageSliderContainer: UIView!
-    
+    var imageSliderViewController: ImageSliderViewController!
+
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var specialOfferLabel: UILabel!
     @IBOutlet weak var additionalServicesLabel: UILabel!
@@ -30,22 +31,16 @@ class ProductPageViewController: UIViewController {
     @IBOutlet weak var rightPriceDetailsContainer: UIView!
     weak var rightPriceDetailsView: PriceDetailsView!
     let defaultRightScrollViewWidth: CGFloat = 200
-
     
     var product: Product!
-    var imageSliderViewController: ImageSliderViewController!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let rightPriceDetailsView = PriceDetailsView.loadFromNib() as! PriceDetailsView
-        rightPriceDetailsView.embed(in: rightPriceDetailsContainer)
-        self.rightPriceDetailsView = rightPriceDetailsView
-        
         // Layout
         edgesForExtendedLayout = []
         
+        // Layout left column
         imageSliderViewController = ImageSliderViewController()
         imageSliderViewController.view.embed(in: imageSliderContainer)
         addChildViewController(imageSliderViewController)
@@ -80,14 +75,19 @@ class ProductPageViewController: UIViewController {
         
         productSpecificationStackView.spacing = 17
         
+        // Layout right column
+        let rightPriceDetailsView = PriceDetailsView.loadFromNib() as! PriceDetailsView
+        rightPriceDetailsView.embed(in: rightPriceDetailsContainer)
+        self.rightPriceDetailsView = rightPriceDetailsView
+        
+        // Apply layout for columns depending on orientation
+        layoutColumns()
+
         // Configure with initial data from product
         configure(with: product)
         
         // Load more details for product
         loadProductDetails()
-        
-        // Apply layout for columns depending on orientation
-        layoutColumns()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
