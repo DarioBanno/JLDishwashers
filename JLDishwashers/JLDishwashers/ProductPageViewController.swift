@@ -21,6 +21,7 @@ class ProductPageViewController: UIViewController {
     @IBOutlet weak var productCodeLabel: UILabel!
     
     @IBOutlet weak var productSpecificationTitleLabel: UILabel!
+    @IBOutlet weak var productSpecificationStackView: UIStackView!
     
     var product: Product!
     var imageSliderViewController: ImageSliderViewController!
@@ -55,6 +56,8 @@ class ProductPageViewController: UIViewController {
         
         productSpecificationTitleLabel.text = "Product specification"
         productSpecificationTitleLabel.font = Resource.Font.mediumRegular
+        
+        productSpecificationStackView.spacing = 20
         
         // Configure with initial data from product
         configure(with: product)
@@ -107,6 +110,23 @@ class ProductPageViewController: UIViewController {
         if let productCode = product.code {
             productCodeLabel.text = "Product code: \(productCode)"
         }
+        
+        // Product specification
+        if let features = product.details?.features,
+            features.count > 0,
+            let attributes = features[0].attributes {
+            for attribute in attributes {
+                let separatorView = UIView()
+                separatorView.backgroundColor = Resource.Color.divider
+                separatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+                productSpecificationStackView.addArrangedSubview(separatorView)
+                
+                let keyValueView = KeyValueView.loadFromNib() as! KeyValueView
+                keyValueView.configure(name: attribute.name ?? "-", value: attribute.value ?? "-")
+                productSpecificationStackView.addArrangedSubview(keyValueView)
+            }
+        }
+        
     }
     
 }

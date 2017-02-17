@@ -45,6 +45,8 @@
 		491CFC351E56050700A61DBF /* UIView+NibLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CFC341E56050700A61DBF /* UIView+NibLoading.swift */; };
 		491CFC371E561CD100A61DBF /* NSAttributedString+HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CFC361E561CD100A61DBF /* NSAttributedString+HTML.swift */; };
 		491CFC3C1E561FB900A61DBF /* NSAttributedString+HTMLTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CFC3B1E561FB900A61DBF /* NSAttributedString+HTMLTests.swift */; };
+		491CFC3E1E56657A00A61DBF /* KeyValueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491CFC3D1E56657A00A61DBF /* KeyValueView.xib */; };
+		491CFC401E56672200A61DBF /* KeyValueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491CFC3F1E56672200A61DBF /* KeyValueView.swift */; };
 		49C192031E5475F300F36F05 /* ProductList_fetch_productId.json in Resources */ = {isa = PBXBuildFile; fileRef = 49C192021E5475F300F36F05 /* ProductList_fetch_productId.json */; };
 		49C192091E54A5D300F36F05 /* ProductPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C192081E54A5D300F36F05 /* ProductPageViewController.swift */; };
 		49C1920B1E54A5F900F36F05 /* ProductPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49C1920A1E54A5F900F36F05 /* ProductPageViewController.xib */; };
@@ -111,6 +113,8 @@
 		491CFC341E56050700A61DBF /* UIView+NibLoading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+NibLoading.swift"; sourceTree = "<group>"; };
 		491CFC361E561CD100A61DBF /* NSAttributedString+HTML.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+HTML.swift"; sourceTree = "<group>"; };
 		491CFC3B1E561FB900A61DBF /* NSAttributedString+HTMLTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+HTMLTests.swift"; sourceTree = "<group>"; };
+		491CFC3D1E56657A00A61DBF /* KeyValueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KeyValueView.xib; sourceTree = "<group>"; };
+		491CFC3F1E56672200A61DBF /* KeyValueView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyValueView.swift; sourceTree = "<group>"; };
 		49C192021E5475F300F36F05 /* ProductList_fetch_productId.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ProductList_fetch_productId.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		49C192081E54A5D300F36F05 /* ProductPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductPageViewController.swift; sourceTree = "<group>"; };
 		49C1920A1E54A5F900F36F05 /* ProductPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProductPageViewController.xib; sourceTree = "<group>"; };
@@ -263,11 +267,13 @@
 		4908FD671E532ADD00CDC700 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				49C192351E54DA0200F36F05 /* URLImageView.swift */,
 				49C1923D1E5502E300F36F05 /* PriceDetailsView.swift */,
 				49C1923B1E55013300F36F05 /* PriceDetailsView.xib */,
 				4908FD651E532AC600CDC700 /* ProductListCollectionViewCell.swift */,
 				4908FD631E532AB800CDC700 /* ProductListCollectionViewCell.xib */,
+				491CFC3F1E56672200A61DBF /* KeyValueView.swift */,
+				491CFC3D1E56657A00A61DBF /* KeyValueView.xib */,
+				49C192351E54DA0200F36F05 /* URLImageView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -391,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4908FD1A1E52FA3800CDC700 /* LaunchScreen.storyboard in Resources */,
+				491CFC3E1E56657A00A61DBF /* KeyValueView.xib in Resources */,
 				49C1923C1E55013300F36F05 /* PriceDetailsView.xib in Resources */,
 				4908FD171E52FA3800CDC700 /* Assets.xcassets in Resources */,
 				49C1920B1E54A5F900F36F05 /* ProductPageViewController.xib in Resources */,
@@ -439,6 +446,7 @@
 				4908FD331E52FD8C00CDC700 /* HTTPClient.swift in Sources */,
 				4908FD661E532AC600CDC700 /* ProductListCollectionViewCell.swift in Sources */,
 				4908FD751E5364F500CDC700 /* HTTPClient+JSON.swift in Sources */,
+				491CFC401E56672200A61DBF /* KeyValueView.swift in Sources */,
 				4908FD101E52FA3800CDC700 /* AppDelegate.swift in Sources */,
 				4908FD5F1E531FE100CDC700 /* ProductListCollectionViewDataSource.swift in Sources */,
 				49C192091E54A5D300F36F05 /* ProductPageViewController.swift in Sources */,
