@@ -14,9 +14,6 @@ class KeyValueView: UIView {
     @IBOutlet weak var valueLabel: UILabel!
     
     override func awakeFromNib() {
-        nameLabel.font = Resource.Font.mediumRegular
-        valueLabel.font = Resource.Font.mediumRegular
-        
         nameLabel.text = ""
         valueLabel.text = ""
     }

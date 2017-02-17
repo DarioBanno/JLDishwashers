@@ -40,10 +40,10 @@ class ProductPageViewController: UIViewController {
         priceLabel.font = Resource.Font.bigBold
 
         specialOfferLabel.text = ""
-        specialOfferLabel.textColor = Resource.Color.importantContent
+        specialOfferLabel.textColor = Resource.Color.specialOffer
 
         additionalServicesLabel.text = ""
-        additionalServicesLabel.textColor = Resource.Color.highlighted
+        additionalServicesLabel.textColor = Resource.Color.warrantyInfo
 
         productInformationTitleLabel.text = "Product information"
         productInformationTitleLabel.font = Resource.Font.mediumBold
@@ -52,10 +52,10 @@ class ProductPageViewController: UIViewController {
         productInformationLabel.lineBreakMode = .byWordWrapping
         
         productCodeLabel.text = ""
-        productCodeLabel.font = Resource.Font.mediumRegular
+        productCodeLabel.font = Resource.Font.contentText
         
         productSpecificationTitleLabel.text = "Product specification"
-        productSpecificationTitleLabel.font = Resource.Font.mediumRegular
+        productSpecificationTitleLabel.font = Resource.Font.contentText
         
         productSpecificationStackView.spacing = 20
         
@@ -102,7 +102,7 @@ class ProductPageViewController: UIViewController {
         
         // Product information
         if let productInformation = product.details?.productInformation,
-            let htmlAttributedString = NSAttributedString(html: productInformation, usingFont: Resource.Font.mediumRegular) {
+            let htmlAttributedString = NSAttributedString(html: productInformation, usingFont: Resource.Font.contentText) {
             productInformationLabel.attributedText = htmlAttributedString
         }
         
@@ -116,17 +116,31 @@ class ProductPageViewController: UIViewController {
             features.count > 0,
             let attributes = features[0].attributes {
             for attribute in attributes {
-                let separatorView = UIView()
-                separatorView.backgroundColor = Resource.Color.divider
-                separatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
-                productSpecificationStackView.addArrangedSubview(separatorView)
-                
-                let keyValueView = KeyValueView.loadFromNib() as! KeyValueView
-                keyValueView.configure(name: attribute.name ?? "-", value: attribute.value ?? "-")
-                productSpecificationStackView.addArrangedSubview(keyValueView)
+                // add separator and keyValueView to stackView for each attribute
+                productSpecificationStackView.addArrangedSubview(separatorView())
+                productSpecificationStackView.addArrangedSubview(keyValueView(name: attribute.name ?? "-", value: attribute.value ?? "-"))
             }
         }
-        
+    }
+    
+    
+    // MARK: - Convenience methods
+    
+    private func separatorView() -> UIView {
+        let separatorView = UIView()
+        separatorView.backgroundColor = Resource.Color.divider
+        separatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        return separatorView
+    }
+    
+    private func keyValueView(name: String, value: String) -> KeyValueView {
+        let keyValueView = KeyValueView.loadFromNib() as! KeyValueView
+        keyValueView.nameLabel.font = Resource.Font.contentText
+        keyValueView.valueLabel.font = Resource.Font.contentText
+        keyValueView.nameLabel.textColor = Resource.Color.contentText
+        keyValueView.valueLabel.textColor = Resource.Color.contentText
+        keyValueView.configure(name: name, value: value)
+        return keyValueView
     }
     
 }

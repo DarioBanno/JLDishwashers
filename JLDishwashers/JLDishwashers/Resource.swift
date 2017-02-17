@@ -10,20 +10,25 @@ import UIKit
 
 struct Resource {
 
-    // TODO: create extensions for UIColor and UIFont
-    
     struct Color {
-        static let highlighted = UIColor.green
-        static let importantContent = UIColor.red
-        static let divider = UIColor.lightGray
+        static let warrantyInfo = UIColor.green
+        static let specialOffer = UIColor.red
+        static let divider = UIColor(colorLiteralRed: 223/255, green: 222/255, blue: 210/255, alpha: 1)
+        static let contentText = UIColor(colorLiteralRed: 114/255, green: 114/255, blue: 114/255, alpha: 1)
+        // - navigationTitle
     }
     
     struct Font {
-        static let mediumRegular = UIFont.systemFont(ofSize: 20)
-        static let mediumBold = UIFont.boldSystemFont(ofSize: 20)
-        static let bigBold = UIFont.boldSystemFont(ofSize: 30)
+        static let contentText =  UIFont(name: "GillSans", size: 18)
+        static let mediumBold = UIFont(name: "GillSans-Bold", size: 20)
+        static let bigBold = UIFont(name: "GillSans-Bold", size: 30)
         
         // paragraph, heading1..6, preformatted
+        // - contentText
+        // - headingNavigation
+        // - headingParagraph
+        // - heading1
+        // - heading2
     }
     
 }
