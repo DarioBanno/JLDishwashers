@@ -18,7 +18,7 @@ class ProductListCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         
         imageView.contentMode = .scaleAspectFit
-        imageView.placeholderImage = #imageLiteral(resourceName: "jlewis-placeholder")
+        imageView.errorPlaceholder = #imageLiteral(resourceName: "jlewis-placeholder")
 
         priceLabel.font = Resource.Font.contentTextBold
         priceLabel.textColor = Resource.Color.darkText
