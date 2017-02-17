@@ -6,36 +6,35 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xvF-dV-B5o" customClass="ProductListCollectionViewCell" customModule="JLDishwashers" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="366" height="258"/>
+            <rect key="frame" x="0.0" y="0.0" width="366" height="261"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="366" height="258"/>
+                <rect key="frame" x="0.0" y="0.0" width="366" height="261"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ux3-OK-dXH">
                         <rect key="frame" x="8" y="8" width="350" height="268"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LUq-9C-Bel" customClass="URLImageView" customModule="JLDishwashers" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="350" height="180"/>
+                                <rect key="frame" x="0.0" y="0.0" width="342" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="hAl-Qe-D3L"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6SH-sd-aC1">
-                                <rect key="frame" x="0.0" y="180" width="350" height="41.5"/>
+                                <rect key="frame" x="0.0" y="180" width="342" height="36.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W23-oC-qxH">
-                                <rect key="frame" x="0.0" y="221.5" width="350" height="20.5"/>
+                                <rect key="frame" x="0.0" y="216.5" width="342" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,18 +44,18 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailingMargin" secondItem="ux3-OK-dXH" secondAttribute="trailing" id="4DI-MC-w5X"/>
-                <constraint firstItem="ux3-OK-dXH" firstAttribute="leading" secondItem="xvF-dV-B5o" secondAttribute="leadingMargin" id="RVD-3T-BhY"/>
-                <constraint firstItem="ux3-OK-dXH" firstAttribute="top" secondItem="xvF-dV-B5o" secondAttribute="topMargin" id="adL-Kw-ZmF"/>
-                <constraint firstAttribute="bottomMargin" secondItem="ux3-OK-dXH" secondAttribute="bottom" id="cvN-aq-iLo"/>
+                <constraint firstItem="ux3-OK-dXH" firstAttribute="leading" secondItem="xvF-dV-B5o" secondAttribute="leading" constant="12" id="UOP-Q7-7oe"/>
+                <constraint firstItem="ux3-OK-dXH" firstAttribute="top" secondItem="xvF-dV-B5o" secondAttribute="top" constant="12" id="ds7-dr-uwq"/>
+                <constraint firstAttribute="bottom" secondItem="ux3-OK-dXH" secondAttribute="bottom" constant="12" id="jP8-mN-fbs"/>
+                <constraint firstAttribute="trailing" secondItem="ux3-OK-dXH" secondAttribute="trailing" constant="12" id="wt7-CM-kX5"/>
             </constraints>
-            <size key="customSize" width="366" height="258"/>
+            <size key="customSize" width="366" height="261"/>
             <connections>
                 <outlet property="imageView" destination="LUq-9C-Bel" id="4H9-it-iRB"/>
                 <outlet property="priceLabel" destination="W23-oC-qxH" id="HLd-fl-4Z9"/>
                 <outlet property="titleLabel" destination="6SH-sd-aC1" id="Lu1-gB-8ce"/>
             </connections>
-            <point key="canvasLocation" x="40" y="786"/>
+            <point key="canvasLocation" x="40" y="787.5"/>
         </collectionViewCell>
     </objects>
 </document>
