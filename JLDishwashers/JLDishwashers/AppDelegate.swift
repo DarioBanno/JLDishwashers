@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window?.backgroundColor = .white
+
+        // Set navigation bar attributes
+        let attributes = [
+            NSForegroundColorAttributeName: Resource.Color.contentText,
+            NSFontAttributeName: Resource.Font.navigationTitle
+        ]
+        UINavigationBar.appearance().titleTextAttributes = attributes
+        
         return true
     }
 

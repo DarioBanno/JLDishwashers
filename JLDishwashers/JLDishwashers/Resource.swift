@@ -16,7 +16,6 @@ struct Resource {
         static let divider = UIColor(colorLiteralRed: 223/255, green: 222/255, blue: 210/255, alpha: 1)
         static let contentText = UIColor(white: 114/255, alpha: 1)
         static let darkText = UIColor(white: 57/255, alpha: 1)
-        // - navigationTitle
     }
     
     struct Font {
@@ -24,13 +23,7 @@ struct Resource {
         static let contentTextLight =  UIFont(name: "GillSans-Light", size: 18)
         static let heading1 = UIFont(name: "GillSans", size: 35)
         static let heading2 = UIFont(name: "GillSans-Light", size: 28)
-        
-        // paragraph, heading1..6, preformatted
-        // - contentText
-        // - headingNavigation
-        // - headingParagraph
-        // - heading1
-        // - heading2
+        static let navigationTitle = UIFont(name: "GillSans-Light", size: 22)
     }
     
 }
