@@ -34,7 +34,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="1046"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="DbJ-IQ-Iqv">
-                            <rect key="frame" x="0.0" y="16" width="375" height="1011"/>
+                            <rect key="frame" x="0.0" y="16" width="375" height="986.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkh-NM-q3B">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="732"/>
@@ -77,16 +77,22 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNm-oU-ePR" userLabel="- Product Information">
-                                    <rect key="frame" x="0.0" y="827" width="375" height="68"/>
+                                    <rect key="frame" x="0.0" y="827" width="375" height="93.5"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductInformation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeF-J5-bdQ">
-                                            <rect key="frame" x="16" y="8" width="343" height="23.5"/>
+                                            <rect key="frame" x="16" y="8" width="343" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFo-2l-tXU">
-                                            <rect key="frame" x="16" y="39.5" width="343" height="20.5"/>
+                                            <rect key="frame" x="16" y="36.5" width="343" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJt-TG-5rq">
+                                            <rect key="frame" x="16" y="65" width="343" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -96,32 +102,18 @@
                                     <constraints>
                                         <constraint firstItem="QeF-J5-bdQ" firstAttribute="leading" secondItem="tNm-oU-ePR" secondAttribute="leadingMargin" constant="8" id="1sy-v6-S3D"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="QeF-J5-bdQ" secondAttribute="trailing" constant="8" id="4xC-UF-KLQ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="HJt-TG-5rq" secondAttribute="bottom" id="Alt-Lh-mDA"/>
                                         <constraint firstItem="QeF-J5-bdQ" firstAttribute="top" secondItem="tNm-oU-ePR" secondAttribute="topMargin" id="Cpm-ef-WJG"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="YFo-2l-tXU" secondAttribute="bottom" id="G39-Pb-5Rs"/>
                                         <constraint firstItem="YFo-2l-tXU" firstAttribute="trailing" secondItem="QeF-J5-bdQ" secondAttribute="trailing" id="HS9-1Z-8nr"/>
                                         <constraint firstItem="YFo-2l-tXU" firstAttribute="top" secondItem="QeF-J5-bdQ" secondAttribute="bottom" constant="8" id="X6k-Zq-w2C"/>
+                                        <constraint firstItem="HJt-TG-5rq" firstAttribute="top" secondItem="YFo-2l-tXU" secondAttribute="bottom" constant="8" id="dqg-TG-RKg"/>
+                                        <constraint firstItem="HJt-TG-5rq" firstAttribute="trailing" secondItem="YFo-2l-tXU" secondAttribute="trailing" id="rwi-Jb-xQe"/>
                                         <constraint firstItem="YFo-2l-tXU" firstAttribute="leading" secondItem="QeF-J5-bdQ" secondAttribute="leading" id="v0h-K2-Ahd"/>
-                                    </constraints>
-                                </view>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cas-Ut-fLX" userLabel="- Product Code">
-                                    <rect key="frame" x="0.0" y="895" width="375" height="50"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJt-TG-5rq">
-                                            <rect key="frame" x="16" y="8" width="101.5" height="34"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <constraints>
-                                        <constraint firstItem="HJt-TG-5rq" firstAttribute="leading" secondItem="cas-Ut-fLX" secondAttribute="leadingMargin" constant="8" id="01U-rs-Qq2"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="HJt-TG-5rq" secondAttribute="bottom" id="QIJ-6j-92P"/>
-                                        <constraint firstItem="HJt-TG-5rq" firstAttribute="top" secondItem="cas-Ut-fLX" secondAttribute="topMargin" id="t6z-GG-02O"/>
+                                        <constraint firstItem="HJt-TG-5rq" firstAttribute="leading" secondItem="YFo-2l-tXU" secondAttribute="leading" id="zNE-dt-7ay"/>
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkJ-ya-Vnw" userLabel="- Product Specification">
-                                    <rect key="frame" x="0.0" y="945" width="375" height="66"/>
+                                    <rect key="frame" x="0.0" y="920.5" width="375" height="66"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZIr-7S-p73">
                                             <rect key="frame" x="16" y="8" width="343" height="50"/>

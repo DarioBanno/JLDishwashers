@@ -15,7 +15,7 @@ class PriceDetailsView: UIView {
     @IBOutlet weak var additionalServicesLabel: UILabel!
     
     override func awakeFromNib() {
-        priceLabel.font = Resource.Font.bigBold
+        priceLabel.font = Resource.Font.heading1
         specialOfferLabel.textColor = Resource.Color.specialOffer
         additionalServicesLabel.textColor = Resource.Color.warrantyInfo
         

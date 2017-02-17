@@ -11,17 +11,19 @@ import UIKit
 struct Resource {
 
     struct Color {
-        static let warrantyInfo = UIColor.green
-        static let specialOffer = UIColor.red
+        static let warrantyInfo = UIColor(colorLiteralRed: 20/255, green: 81/255, blue: 53/255, alpha: 1)
+        static let specialOffer = UIColor(colorLiteralRed: 169/255, green: 0, blue: 0, alpha: 1)
         static let divider = UIColor(colorLiteralRed: 223/255, green: 222/255, blue: 210/255, alpha: 1)
-        static let contentText = UIColor(colorLiteralRed: 114/255, green: 114/255, blue: 114/255, alpha: 1)
+        static let contentText = UIColor(white: 114/255, alpha: 1)
+        static let darkText = UIColor(white: 57/255, alpha: 1)
         // - navigationTitle
     }
     
     struct Font {
         static let contentText =  UIFont(name: "GillSans", size: 18)
-        static let mediumBold = UIFont(name: "GillSans-Bold", size: 20)
-        static let bigBold = UIFont(name: "GillSans-Bold", size: 30)
+        static let contentTextLight =  UIFont(name: "GillSans-Light", size: 18)
+        static let heading1 = UIFont(name: "GillSans", size: 35)
+        static let heading2 = UIFont(name: "GillSans-Light", size: 28)
         
         // paragraph, heading1..6, preformatted
         // - contentText

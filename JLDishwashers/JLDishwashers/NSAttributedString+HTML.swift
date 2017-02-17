@@ -25,7 +25,7 @@ extension NSAttributedString {
         // By default NSAttributedString uses TimesNewRoman for HTML, therefore we need to manually apply a div containing a global font style.
         var htmlString = html
         if let font = font {
-            let fontStyleTag = "style=\"font-family: '\(font.fontName)'; font-size: \(font.pointSize)\""
+            let fontStyleTag = "style=\"font-family: '\(font.fontName)'; font-size: \(font.pointSize); color:#727272\""
             htmlString = "<div \(fontStyleTag)>\(html)</div>"
         }
         

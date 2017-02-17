@@ -37,27 +37,34 @@ class ProductPageViewController: UIViewController {
         imageSliderViewController.view.embed(in: imageSliderContainer)
         
         priceLabel.text = ""
-        priceLabel.font = Resource.Font.bigBold
+        priceLabel.font = Resource.Font.heading1
+        priceLabel.textColor = Resource.Color.darkText
 
         specialOfferLabel.text = ""
+        specialOfferLabel.font = Resource.Font.contentText
         specialOfferLabel.textColor = Resource.Color.specialOffer
 
         additionalServicesLabel.text = ""
+        additionalServicesLabel.font = Resource.Font.contentText
         additionalServicesLabel.textColor = Resource.Color.warrantyInfo
 
         productInformationTitleLabel.text = "Product information"
-        productInformationTitleLabel.font = Resource.Font.mediumBold
+        productInformationTitleLabel.font = Resource.Font.heading2
+        productInformationTitleLabel.textColor = Resource.Color.contentText
         
         productInformationLabel.text = ""
         productInformationLabel.lineBreakMode = .byWordWrapping
+        productInformationLabel.textColor = Resource.Color.contentText
         
         productCodeLabel.text = ""
-        productCodeLabel.font = Resource.Font.contentText
+        productCodeLabel.font = Resource.Font.contentTextLight
+        productCodeLabel.textColor = Resource.Color.contentText
         
         productSpecificationTitleLabel.text = "Product specification"
-        productSpecificationTitleLabel.font = Resource.Font.contentText
+        productSpecificationTitleLabel.font = Resource.Font.heading2
+        productSpecificationTitleLabel.textColor = Resource.Color.contentText
         
-        productSpecificationStackView.spacing = 20
+        productSpecificationStackView.spacing = 17
         
         // Configure with initial data from product
         configure(with: product)
@@ -129,7 +136,7 @@ class ProductPageViewController: UIViewController {
     private func separatorView() -> UIView {
         let separatorView = UIView()
         separatorView.backgroundColor = Resource.Color.divider
-        separatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        separatorView.heightAnchor.constraint(equalToConstant: 0.5).isActive = true
         return separatorView
     }
     
