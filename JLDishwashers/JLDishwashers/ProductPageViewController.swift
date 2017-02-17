@@ -14,6 +14,7 @@ class ProductPageViewController: UIViewController {
     @IBOutlet weak var imageSliderContainer: UIView!
     var imageSliderViewController: ImageSliderViewController!
 
+    @IBOutlet weak var leftPriceDetailsContainer: UIView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var specialOfferLabel: UILabel!
     @IBOutlet weak var additionalServicesLabel: UILabel!
@@ -98,8 +99,10 @@ class ProductPageViewController: UIViewController {
     func layoutColumns() {
         if UIDevice.current.orientation.isLandscape {
             rightScrollViewWidthConstraint.constant = defaultRightScrollViewWidth
+            leftPriceDetailsContainer.isHidden = true
         } else {
             rightScrollViewWidthConstraint.constant = 0
+            leftPriceDetailsContainer.isHidden = false
         }
     }
     

@@ -15,6 +15,7 @@
             <connections>
                 <outlet property="additionalServicesLabel" destination="GdG-A7-cVU" id="ca0-Tq-GXK"/>
                 <outlet property="imageSliderContainer" destination="xkh-NM-q3B" id="JPN-My-8LP"/>
+                <outlet property="leftPriceDetailsContainer" destination="FfI-Cr-GMn" id="3pN-tj-ptF"/>
                 <outlet property="priceLabel" destination="G9C-ow-Wgh" id="VHh-nW-sRI"/>
                 <outlet property="productCodeLabel" destination="HJt-TG-5rq" id="MSw-th-Ops"/>
                 <outlet property="productInformationLabel" destination="YFo-2l-tXU" id="Z9I-KH-iUp"/>
@@ -36,7 +37,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="412" height="1046"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="DbJ-IQ-Iqv">
-                            <rect key="frame" x="0.0" y="16" width="412" height="988"/>
+                            <rect key="frame" x="0.0" y="16" width="412" height="1116"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xkh-NM-q3B">
                                     <rect key="frame" x="0.0" y="0.0" width="412" height="732"/>
@@ -79,22 +80,25 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tNm-oU-ePR" userLabel="- Product Information">
-                                    <rect key="frame" x="0.0" y="827" width="412" height="95"/>
+                                    <rect key="frame" x="0.0" y="827" width="412" height="173"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductInformation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeF-J5-bdQ">
-                                            <rect key="frame" x="16" y="8" width="380" height="22"/>
+                                            <rect key="frame" x="16" y="8" width="380" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="XED-j5-UIh"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFo-2l-tXU">
-                                            <rect key="frame" x="16" y="38" width="380" height="20.5"/>
+                                            <rect key="frame" x="16" y="116" width="380" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductCode" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJt-TG-5rq">
-                                            <rect key="frame" x="16" y="66.5" width="380" height="20.5"/>
+                                            <rect key="frame" x="16" y="144.5" width="380" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -115,15 +119,15 @@
                                     </constraints>
                                 </view>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkJ-ya-Vnw" userLabel="- Product Specification">
-                                    <rect key="frame" x="0.0" y="922" width="412" height="66"/>
+                                    <rect key="frame" x="0.0" y="1000" width="412" height="116"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZIr-7S-p73">
-                                            <rect key="frame" x="16" y="8" width="380" height="50"/>
+                                            <rect key="frame" x="16" y="8" width="380" height="100"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ProductSpecification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P8Z-Wl-jwB">
-                                                    <rect key="frame" x="0.0" y="0.0" width="380" height="50"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="380" height="100"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="Bcp-vl-mme"/>
+                                                        <constraint firstAttribute="height" constant="100" id="Bcp-vl-mme"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
