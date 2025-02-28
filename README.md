@@ -1,2 +1,2 @@
 # JLDishwashers
-Browse John Lewis' catalogue for dishwashers
+John Lewis app to browse a catalogue of dishwashers
